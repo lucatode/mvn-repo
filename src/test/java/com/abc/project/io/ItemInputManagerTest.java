@@ -1,13 +1,11 @@
 package com.abc.project.io;
 
 import com.abc.project.model.Item;
-import org.junit.Assert;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
 
-public class ItemsInputManager {
-
+public class ItemInputManagerTest {
     final String jsonInput = "";
 
     @Test
@@ -30,13 +28,7 @@ public class ItemsInputManager {
         Item[] items = inputManager.getArray(jsonInput);
 
         //Verify
-        assertTrue(items != null);
+        assertTrue(items.length > 0);
     }
-
-
-
-
-
-
 
 }
