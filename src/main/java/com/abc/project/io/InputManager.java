@@ -1,7 +1,9 @@
 package com.abc.project.io;
 
+import java.util.List;
+
 public interface InputManager<T> {
 
-    T[] getArray(String jsonString);
+    List<T> getList(String jsonString);
 
 }

@@ -1,17 +1,20 @@
 package com.abc.project.io;
 
 import com.abc.project.model.Item;
-
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ItemsInputManager implements InputManager<Item> {
 
-    public Item[] getArray(String jsonString) {
-        BigDecimal d = new BigDecimal(10.00);
-        Item[] array = new Item[1];
-        array[0] = new Item(d, imported);
+    public List<Item> getList(String jsonString) {
 
-        return array;
+        List<Item> list = new ArrayList<Item>();
+        BigDecimal d = new BigDecimal(10.00);
+        Item item = new Item(d, false, "Item Name");
+        list.add(item);
+
+        return list;
     }
 
 }

@@ -3,82 +3,93 @@ package com.abc.project.io;
 import com.abc.project.model.Item;
 import org.junit.Test;
 import java.math.BigDecimal;
+import java.util.List;
+
 import static junit.framework.TestCase.assertTrue;
 
 public class ItemInputManagerTest {
     final String jsonInput = "";
 
-    //Array
-
+    //List
     @Test
-    public void getArray_fromJsonString_arrayNotNull(){
+    public void getList_fromJsonString_ListNotNull(){
         //Setup
-        final ItemsInputManager inputManager = new ItemsInputManager();
+        final InputManager<Item> inputManager = new ItemsInputManager();
         //Execute
-        Item[] items = inputManager.getArray(jsonInput);
+        List<Item> items = inputManager.getList(jsonInput);
 
         //Verify
         assertTrue(items != null);
     }
 
     @Test
-    public void getArray_fromJsonString_arrayCountGreaterThanZero(){
+    public void getList_fromJsonString_ListCountGreaterThanZero(){
         //Setup
-        final ItemsInputManager inputManager = new ItemsInputManager();
+        final InputManager<Item> inputManager = new ItemsInputManager();
 
         //Execute
-        Item[] items = inputManager.getArray(jsonInput);
+        List<Item> items = inputManager.getList(jsonInput);
 
         //Verify
-        assertTrue(items.length > 0);
+        assertTrue(items.size() > 0);
     }
 
-
     //Price
-
     @Test
-    public void getArray_fromJsonString_firstElementContainsPrice(){
+    public void getList_fromJsonString_firstElementContainsPrice(){
         //Setup
-        final ItemsInputManager inputManager = new ItemsInputManager();
+        final InputManager<Item> inputManager = new ItemsInputManager();
 
         //Execute
-        Item[] items = inputManager.getArray(jsonInput);
+        List<Item> items = inputManager.getList(jsonInput);
 
         //Verify
-        Item firstItem = items[0];
+        Item firstItem = items.get(0);
         assertTrue(firstItem.getPrice() !=  null);
     }
 
     @Test
-    public void getArray_fromJsonString_firstElementPriceAsExpected(){
+    public void getList_fromJsonString_firstElementPriceAsExpected(){
         //Setup
-        final ItemsInputManager inputManager = new ItemsInputManager();
+        final InputManager<Item> inputManager = new ItemsInputManager();
         BigDecimal expectedPrice = new BigDecimal(10.00);
 
         //Execute
-        Item[] items = inputManager.getArray(jsonInput);
+        List<Item> items = inputManager.getList(jsonInput);
 
         //Verify
-        Item firstItem = items[0];
+        Item firstItem = items.get(0);
         assertTrue(firstItem.getPrice().equals(expectedPrice));
     }
 
     //Imported
     @Test
-    public void getArray_fromJsonString_firstElementIsNotImported(){
+    public void getList_fromJsonString_firstElementIsNotImported(){
         //Setup
-        final ItemsInputManager inputManager = new ItemsInputManager();
+        final InputManager<Item> inputManager = new ItemsInputManager();
 
         //Execute
-        Item[] items = inputManager.getArray(jsonInput);
+        List<Item> items = inputManager.getList(jsonInput);
 
         //Verify
-        Item firstItem = items[0];
-        assertTrue(firstItem.isImported());
+        Item firstItem = items.get(0);
+        assertTrue(!firstItem.isImported());
     }
 
     //Name
-    
+    @Test
+    public void getList_fromJsonString_firstElementNameAsExpected(){
+        //Setup
+        final InputManager<Item> inputManager = new ItemsInputManager();
+        final String expectedName = "Item Name";
+
+        //Execute
+        List<Item> items = inputManager.getList(jsonInput);
+
+        //Verify
+        Item firstItem = items.get(0);
+        assertTrue(firstItem.getName() == expectedName);
+    }
 
 
 
