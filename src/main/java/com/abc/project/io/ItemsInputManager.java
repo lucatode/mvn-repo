@@ -1,19 +1,22 @@
 package com.abc.project.io;
 
 import com.abc.project.model.Item;
-import java.math.BigDecimal;
-import java.util.ArrayList;
+import com.google.gson.Gson;
+
+import java.util.Arrays;
 import java.util.List;
 
 public class ItemsInputManager implements InputManager<Item> {
 
+    private final Gson gson;
+
+    public ItemsInputManager(Gson gson){
+        this.gson = gson;
+    }
+
     public List<Item> getList(String jsonString) {
-
-        List<Item> list = new ArrayList<Item>();
-        BigDecimal d = new BigDecimal(10.00);
-        Item item = new Item(d, false, "Item Name");
-        list.add(item);
-
+        Item[] items = this.gson.fromJson(jsonString, Item[].class);
+        List<Item> list = Arrays.asList(items);
         return list;
     }
 
