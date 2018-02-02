@@ -39,7 +39,7 @@ public class EngineTest {
             return this;
         }
 
-        public ItemBuilder setPrice(final ItemType type) {
+        public ItemBuilder setType(ItemType type) {
             this.type = type;
             return this;
         }
@@ -47,6 +47,7 @@ public class EngineTest {
         public Item build() {
             return new Item(price, imported, name, type);
         }
+
 
     }
 
@@ -116,7 +117,7 @@ public class EngineTest {
         //Setup
         Engine engine = new Engine();
         List<Item> items = new ArrayList<Item>();
-        items.add(ItemBuilder.GetInstance());
+        items.add(builder().build());
 
         //Execute
         Output output = engine.calculate(items);
@@ -130,7 +131,11 @@ public class EngineTest {
         //Setup
         Engine engine = new Engine();
         List<Item> items = new ArrayList<Item>();
-        items.add(builder().build());
+        items.add( builder()
+                .setPrice(new BigDecimal("14.99"))
+                .setImported(false)
+                .setType(ItemType.STANDARD)
+                .build());
         BigDecimal expectedPrice = new BigDecimal("16.49");
 
         //Execute
