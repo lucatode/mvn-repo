@@ -1,0 +1,25 @@
+[{
+  "quantity": 1,
+  "name": "bottle of perfume",
+  "imported": true,
+  "price": 27.99,
+  "type": "STANDARD"
+},{
+  "quantity": 1,
+  "name": "bottle of perfume",
+  "imported": false,
+  "price": 18.99,
+  "type": "STANDARD"
+},{
+  "quantity": 1,
+  "name": "packet of headache pills",
+  "imported": false,
+  "price": 9.75,
+  "type": "MEDICAL"
+},{
+  "quantity": 1,
+  "name": "box of chocolates",
+  "imported": true,
+  "price": 11.25,
+  "type": "FOOD"
+}]

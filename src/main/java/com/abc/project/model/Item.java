@@ -1,6 +1,7 @@
 package com.abc.project.model;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Item {
 
@@ -11,6 +12,8 @@ public class Item {
 
     public Item(BigDecimal price, boolean imported, String name, ItemType type) {
         this.price = price;
+        this.price.setScale(2, BigDecimal.ROUND_HALF_UP);
+        this.price.precision();
         this.imported = imported;
         this.name = name;
         this.type = type;
@@ -27,5 +30,23 @@ public class Item {
     }
     public ItemType getType() {
         return type;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Item item = (Item) o;
+        return imported == item.imported &&
+                Objects.equals(price, item.price) &&
+                Objects.equals(name, item.name) &&
+                type == item.type;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(price, imported, name, type);
     }
 }

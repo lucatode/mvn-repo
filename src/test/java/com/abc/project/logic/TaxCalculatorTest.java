@@ -7,8 +7,6 @@ import com.abc.project.model.ItemType;
 import org.junit.Test;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
@@ -32,7 +30,7 @@ public class TaxCalculatorTest {
     public void calculate_ItemAndExceptionList_OneAndAHalf(){
         //Setup
         BigDecimal expectedTax = new BigDecimal("1.50");
-        TaxCalculator tc = Builder.taxCalculator().addTypeToException(ItemType.BOOK).build();
+        TaxCalculator tc = Builder.taxCalculator().addTypeToExceptions(ItemType.BOOK).build();
         Item item = Builder.item()
                 .setPrice("10.00")
                 .setImported(true)
@@ -51,8 +49,8 @@ public class TaxCalculatorTest {
         //Setup
         BigDecimal expectedTax = new BigDecimal("1.50");
         TaxCalculator tc = Builder.taxCalculator()
-                .addTypeToException(ItemType.BOOK)
-                .addTypeToException(ItemType.FOOD)
+                .addTypeToExceptions(ItemType.BOOK)
+                .addTypeToExceptions(ItemType.FOOD)
                 .build();
 
         Item item = Builder.item()
@@ -73,8 +71,8 @@ public class TaxCalculatorTest {
         //Setup
         BigDecimal expectedTax = new BigDecimal("0.00");
         TaxCalculator tc = Builder.taxCalculator()
-                .addTypeToException(ItemType.BOOK)
-                .addTypeToException(ItemType.FOOD)
+                .addTypeToExceptions(ItemType.BOOK)
+                .addTypeToExceptions(ItemType.FOOD)
                 .build();
 
         Item item = Builder.item()
@@ -95,8 +93,8 @@ public class TaxCalculatorTest {
         //Setup
         BigDecimal expectedTax = new BigDecimal("0.50");
         TaxCalculator tc = Builder.taxCalculator()
-                .addTypeToException(ItemType.BOOK)
-                .addTypeToException(ItemType.FOOD)
+                .addTypeToExceptions(ItemType.BOOK)
+                .addTypeToExceptions(ItemType.FOOD)
                 .build();
 
         Item item = Builder.item()
@@ -118,8 +116,8 @@ public class TaxCalculatorTest {
         //Setup
         BigDecimal expectedTax = new BigDecimal("4.20");
         TaxCalculator tc = Builder.taxCalculator()
-                .addTypeToException(ItemType.BOOK)
-                .addTypeToException(ItemType.FOOD)
+                .addTypeToExceptions(ItemType.BOOK)
+                .addTypeToExceptions(ItemType.FOOD)
                 .build();
 
         Item item = Builder.item()
@@ -141,8 +139,8 @@ public class TaxCalculatorTest {
         //Setup
         BigDecimal expectedTax = new BigDecimal("0.60");
         TaxCalculator tc = Builder.taxCalculator()
-                .addTypeToException(ItemType.BOOK)
-                .addTypeToException(ItemType.FOOD)
+                .addTypeToExceptions(ItemType.BOOK)
+                .addTypeToExceptions(ItemType.FOOD)
                 .build();
 
         Item item = Builder.item()

@@ -33,6 +33,7 @@ public class Builder {
         }
         public ItemBuilder setPrice(final String price) {
             this.price = new BigDecimal(price);
+            this.price = this.price.setScale(2, BigDecimal.ROUND_HALF_UP);
             return this;
         }
         public ItemBuilder setPrice(final double price) {
@@ -74,7 +75,7 @@ public class Builder {
             this.importedTax = new BigDecimal("0.05");
         }
 
-        public TaxCalculatorBuilder addTypeToException(ItemType type) {
+        public TaxCalculatorBuilder addTypeToExceptions(ItemType type) {
             this.exceptions.add(type);
             return this;
         }
@@ -111,8 +112,19 @@ public class Builder {
             return this;
         }
 
+        public OutputBuilder setTotal(String total){
+            this.total = new BigDecimal(total);
+            return this;
+        }
+
+
         public OutputBuilder setTaxes(BigDecimal taxes){
             this.taxes = taxes;
+            return this;
+        }
+
+        public OutputBuilder setTaxes(String taxes){
+            this.taxes = new BigDecimal(taxes);
             return this;
         }
 
@@ -121,6 +133,111 @@ public class Builder {
         }
 
 
+    }
+
+
+    public static String input_example_1(){
+        final String inputExample01 = "[{\n" +
+                "  \"quantity\": 1,\n" +
+                "  \"name\": \"book\",\n" +
+                "  \"imported\": false,\n" +
+                "  \"price\": 12.49,\n" +
+                "  \"type\": \"BOOK\"\n" +
+                "},{\n" +
+                "  \"quantity\": 1,\n" +
+                "  \"name\": \"music CD\",\n" +
+                "  \"imported\": false,\n" +
+                "  \"price\": 14.99,\n" +
+                "  \"type\": \"STANDARD\"\n" +
+                "},{\n" +
+                "  \"quantity\": 1,\n" +
+                "  \"name\": \"chocolate bar\",\n" +
+                "  \"imported\": false,\n" +
+                "  \"price\": 0.85,\n" +
+                "  \"type\": \"FOOD\"\n" +
+                "}]";
+        return inputExample01;
+    }
+    public static String input_example_2(){
+        return "[{\n" +
+                "  \"quantity\": 1,\n" +
+                "  \"name\": \"box of chocolates\",\n" +
+                "  \"imported\": true,\n" +
+                "  \"price\": 10.00,\n" +
+                "  \"type\": \"FOOD\"\n" +
+                "},{\n" +
+                "  \"quantity\": 1,\n" +
+                "  \"name\": \"bottle of perfume\",\n" +
+                "  \"imported\": true,\n" +
+                "  \"price\": 47.50,\n" +
+                "  \"type\": \"STANDARD\"\n" +
+                "}]";
+    }
+    public static String input_example_3(){
+        return "[{\n" +
+                "  \"quantity\": 1,\n" +
+                "  \"name\": \"bottle of perfume\",\n" +
+                "  \"imported\": true,\n" +
+                "  \"price\": 27.99,\n" +
+                "  \"type\": \"STANDARD\"\n" +
+                "},{\n" +
+                "  \"quantity\": 1,\n" +
+                "  \"name\": \"bottle of perfume\",\n" +
+                "  \"imported\": false,\n" +
+                "  \"price\": 18.99,\n" +
+                "  \"type\": \"STANDARD\"\n" +
+                "},{\n" +
+                "  \"quantity\": 1,\n" +
+                "  \"name\": \"packet of headache pills\",\n" +
+                "  \"imported\": false,\n" +
+                "  \"price\": 9.75,\n" +
+                "  \"type\": \"MEDICAL\"\n" +
+                "},{\n" +
+                "  \"quantity\": 1,\n" +
+                "  \"name\": \"box of chocolates\",\n" +
+                "  \"imported\": true,\n" +
+                "  \"price\": 11.25,\n" +
+                "  \"type\": \"FOOD\"\n" +
+                "}]";
+    }
+
+    public static Output output_example_1(){
+
+        Item item00 = Builder.item().setImported(false).setName("book").setType(ItemType.BOOK).setPrice("12.49").build();
+        Item item01 = Builder.item().setImported(false).setName("music CD").setType(ItemType.STANDARD).setPrice("16.49").build();
+        Item item02 = Builder.item().setImported(false).setName("chocolate bar").setType(ItemType.FOOD).setPrice("0.85").build();
+        return Builder.output()
+                .setTotal("29.83")
+                .setTaxes("1.50")
+                .addItem(item00)
+                .addItem(item01)
+                .addItem(item02)
+                .build();
+    }
+    public static Output output_example_2() {
+        Item item00 = Builder.item().setImported(true).setName("box of chocolates").setType(ItemType.FOOD).setPrice("10.50").build();
+        Item item01 = Builder.item().setImported(true).setName("bottle of perfume").setType(ItemType.STANDARD).setPrice("54.65").build();
+        return Builder.output()
+                .setTotal("65.15")
+                .setTaxes("7.65")
+                .addItem(item00)
+                .addItem(item01)
+                .build();
+    }
+    public static Output output_example_3(){
+        Item item00 = Builder.item().setImported(true).setName("bottle of perfume").setType(ItemType.STANDARD).setPrice("32.19").build();
+        Item item01 = Builder.item().setImported(false).setName("bottle of perfume").setType(ItemType.STANDARD).setPrice("20.89").build();
+        Item item02 = Builder.item().setImported(false).setName("packet of headache pills").setType(ItemType.MEDICAL).setPrice("9.75").build();
+        Item item03 = Builder.item().setImported(true).setName("box of chocolates").setType(ItemType.FOOD).setPrice("11.85").build();
+
+        return Builder.output()
+                .setTotal("74.68")
+                .setTaxes("6.70")
+                .addItem(item00)
+                .addItem(item01)
+                .addItem(item02)
+                .addItem(item03)
+                .build();
     }
 
 }

@@ -1,46 +1,68 @@
 package com.abc.project;
+import com.abc.project.builder.Builder;
+import com.abc.project.io.ItemsInputManager;
+import com.abc.project.logic.Engine;
+import com.abc.project.model.Item;
+import com.abc.project.model.ItemType;
+import com.abc.project.model.Output;
+import com.google.gson.Gson;
 import org.junit.Test;
 
-import java.io.FileReader;
+import java.util.List;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class IntegrationTest {
 
-    final String inputExample01 = "";
-    final String inputExample02 = "";
-    final String inputExample03 = "";
-
     @Test
     public void integrationTest_Example_1(){
-        //Import from source file "example_01"
-//        String jsonString = null;
-//        try{
-//            FileReader fr = new FileReader(inputExample01);
-//            jsonString = fr.toString();
-//        }catch (Exception e){ assertTrue(false); }
 
         //Calculate output
-
+        ItemsInputManager iim = new ItemsInputManager();
+        Engine e = new Engine(Builder.taxCalculator()
+                .addTypeToExceptions(ItemType.FOOD)
+                .addTypeToExceptions(ItemType.BOOK)
+                .addTypeToExceptions(ItemType.MEDICAL)
+                .build());
+        List<Item> items = iim.getList(new Gson(), Builder.input_example_1()); //example_2
+        Output o = e.calculate(items);
 
         //Assert output is equals to expect output
+        Output expectedOutput = Builder.output_example_1();
+        assertEquals(expectedOutput.hashCode(), o.hashCode());
     }
 
     @Test
     public void integrationTest_Example_2(){
-        //Import from source file "example_02"
-
         //Calculate output
+        ItemsInputManager iim = new ItemsInputManager();
+        Engine e = new Engine(Builder.taxCalculator()
+                .addTypeToExceptions(ItemType.FOOD)
+                .addTypeToExceptions(ItemType.BOOK)
+                .addTypeToExceptions(ItemType.MEDICAL)
+                .build());
+        List<Item> items = iim.getList(new Gson(), Builder.input_example_2()); //example_2
+        Output o = e.calculate(items);
 
         //Assert output is equals to expect output
+        Output expectedOutput = Builder.output_example_2();
+        assertEquals(expectedOutput.hashCode(), o.hashCode());
     }
 
     @Test
     public void integrationTest_Example_3(){
-        //Import from source file "example_03"
-
         //Calculate output
+        ItemsInputManager iim = new ItemsInputManager();
+        Engine e = new Engine(Builder.taxCalculator()
+                .addTypeToExceptions(ItemType.FOOD)
+                .addTypeToExceptions(ItemType.BOOK)
+                .addTypeToExceptions(ItemType.MEDICAL)
+                .build());
+        List<Item> items = iim.getList(new Gson(), Builder.input_example_3()); //example_2
+        Output o = e.calculate(items);
 
         //Assert output is equals to expect output
+        Output expectedOutput = Builder.output_example_3();
+        assertEquals(expectedOutput.hashCode(), o.hashCode());
     }
 }
