@@ -39,7 +39,7 @@ public class TaxCalculator implements Calculator<Item, BigDecimal> {
         BigDecimal itemPrice = item.getPrice();
         itemPrice.setScale(2, BigDecimal.ROUND_HALF_UP);
 
-        BigDecimal taxValue = (itemPrice.multiply(taxPerc));
+        BigDecimal taxValue = (itemPrice.multiply(taxPerc)).multiply(new BigDecimal(item.getQuantity()));
         BigDecimal tax = rounder.round(taxValue);
 
         tax = tax.setScale(2, BigDecimal.ROUND_HALF_UP);

@@ -156,5 +156,29 @@ public class TaxCalculatorTest {
         assertEquals(expectedTax, b);
     }
 
+    //Goal: 0.5625 rounded to 0.60
+    @Test //Input: { item:{ 11.25,2, true, FOOD}:{BOOK,FOOD} } - ExpectedOutput: { 1.20 }
+    public void calculate_ItemWithQuantityTwo_ExpectedTax(){
+        //Setup
+        BigDecimal expectedTax = new BigDecimal("1.15");
+        TaxCalculator tc = Builder.taxCalculator()
+                .addTypeToExceptions(ItemType.BOOK)
+                .addTypeToExceptions(ItemType.FOOD)
+                .build();
+
+        Item item = Builder.item()
+                .setPrice("11.25")
+                .setImported(true)
+                .setType(ItemType.FOOD)
+                .setQuantity(2)
+                .build();
+
+        //Execute
+        BigDecimal b = tc.calculate(item);
+
+        //Verify
+        assertEquals(expectedTax, b);
+    }
+
 
 }

@@ -21,6 +21,7 @@ public class Builder {
         private ItemType type = ItemType.STANDARD;
         private boolean imported = false;
         private String name = "Item";
+        private int quantity = 1;
 
         public ItemBuilder setName(final String name) {
             this.name = name;
@@ -51,9 +52,15 @@ public class Builder {
             return this;
         }
 
-        public Item build() {
-            return new Item(price, imported, name, type);
+        public ItemBuilder setQuantity(int quantity) {
+            this.quantity = quantity;
+            return this;
         }
+
+        public Item build() {
+            return new Item(price, imported, name, type, quantity);
+        }
+
 
 
     }

@@ -56,7 +56,7 @@ public class Engine {
             total = total.add(newPrice);
 
             //build output items
-            Item outputItem = new Item(newPrice, item.isImported(), item.getName(), item.getType());
+            Item outputItem = new Item(newPrice, item.isImported(), item.getName(), item.getType(), item.getQuantity());
             outputItems.add(outputItem);
         }
         //build output

@@ -6,12 +6,14 @@ import java.util.Objects;
 public class Item {
 
     private final BigDecimal price;
+    private final int quantity;
     private final boolean imported;
     private final String name;
     private final ItemType type;
 
-    public Item(BigDecimal price, boolean imported, String name, ItemType type) {
+    public Item(BigDecimal price, boolean imported, String name, ItemType type, int quantity) {
         this.price = price;
+        this.quantity = quantity;
         this.price.setScale(2, BigDecimal.ROUND_HALF_UP);
         this.price.precision();
         this.imported = imported;
@@ -31,7 +33,9 @@ public class Item {
     public ItemType getType() {
         return type;
     }
-
+    public int getQuantity() {
+        return quantity;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -49,4 +53,6 @@ public class Item {
 
         return Objects.hash(price, imported, name, type);
     }
+
+
 }
