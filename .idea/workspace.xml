@@ -19,8 +19,8 @@
       <file leaf-file-name="EngineTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2057">
-              <caret line="435" column="11" lean-forward="true" selection-start-line="435" selection-start-column="11" selection-end-line="435" selection-end-column="11" />
+            <state relative-caret-position="1666">
+              <caret line="456" column="0" lean-forward="false" selection-start-line="456" selection-start-column="0" selection-end-line="456" selection-end-column="0" />
               <folding>
                 <element signature="class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#setName#0;class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
@@ -29,7 +29,6 @@
                 <element signature="method#setPrice#2;class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#setImported#0;class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#setType#0;class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
-                <element signature="docComment;method#calculate_Items_OutputNotNull#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#calculate_Items_OutputNotNull#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#calculate_Items_OutputTotalNotNull#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#calculate_OneItem_TotalEqualsItemPrice#0;class#EngineTest#0" expanded="false" />
@@ -43,12 +42,15 @@
                 <element signature="method#calculate_Items_OutputTaxNotNull#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#calculate_OneItemList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#calculate_TwoItemsList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
-                <element signature="docComment;method#getTaxToApply_ItemAndExceptionList_ResultNotNull#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#getTaxToApply_ItemAndExceptionList_ResultNotNull#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#getTaxToApply_ItemAndExceptionList_OneAndAHalf#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_OneAndAHalf#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_One#0;class#EngineTest#0" expanded="false" />
                 <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOneAndAHalf#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOutput#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#getTaxToApply_Item_ExpectedRoundedOutput#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#roundNearestFiveCent_Input_ExpectedOutput01#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#roundNearestFiveCent_Input_ExpectedOutput02#0;class#EngineTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -57,14 +59,12 @@
       <file leaf-file-name="Engine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+            <state relative-caret-position="594">
+              <caret line="82" column="16" lean-forward="false" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#707#717#0" expanded="true" />
-                <element signature="e#996#1002#0" expanded="true" />
-                <element signature="e#2325#2326#0" expanded="true" />
-                <element signature="e#2381#2382#0" expanded="true" />
+                <element signature="e#1000#1006#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,8 +137,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/io/ItemsInputManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/io/ItemInputManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/logic/Engine.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/logic/Engine.java" />
       </list>
     </option>
   </component>
@@ -373,7 +373,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="EngineTest.getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOutput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EngineTest.getTaxToApply_ItemAndExceptionList_OneAndAHalf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.abc.project.logic.*" />
@@ -385,32 +385,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.abc.project.logic" />
       <option name="MAIN_CLASS_NAME" value="com.abc.project.logic.EngineTest" />
-      <option name="METHOD_NAME" value="getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOutput" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="EngineTest.getTaxToApply_ItemAndTwoElementExceptionsList_One" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.abc.project.logic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="taxcalculator" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.abc.project.logic" />
-      <option name="MAIN_CLASS_NAME" value="com.abc.project.logic.EngineTest" />
-      <option name="METHOD_NAME" value="getTaxToApply_ItemAndTwoElementExceptionsList_One" />
+      <option name="METHOD_NAME" value="getTaxToApply_ItemAndExceptionList_OneAndAHalf" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -448,20 +423,45 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="ItemInputManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EngineTest.roundNearestFiveCent_Input_ExpectedOutput01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.abc.project.io.*" />
+          <option name="PATTERN" value="com.abc.project.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="taxcalculator" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.abc.project.io" />
-      <option name="MAIN_CLASS_NAME" value="com.abc.project.io.ItemInputManagerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.abc.project.logic" />
+      <option name="MAIN_CLASS_NAME" value="com.abc.project.logic.EngineTest" />
+      <option name="METHOD_NAME" value="roundNearestFiveCent_Input_ExpectedOutput01" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="EngineTest.roundNearestFiveCent_Input_ExpectedOutput02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.abc.project.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="taxcalculator" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.abc.project.logic" />
+      <option name="MAIN_CLASS_NAME" value="com.abc.project.logic.EngineTest" />
+      <option name="METHOD_NAME" value="roundNearestFiveCent_Input_ExpectedOutput02" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -535,18 +535,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.EngineTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ItemInputManagerTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.EngineTest.getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOutput" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.EngineTest.getTaxToApply_ItemAndTwoElementExceptionsList_One" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EngineTest.getTaxToApply_Item_ExpectedRoundedOutput" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.EngineTest.getTaxToApply_Item_ExpectedRoundedOutput" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.EngineTest.roundNearestFiveCent_Input_ExpectedOutput01" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EngineTest.roundNearestFiveCent_Input_ExpectedOutput02" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.EngineTest.getTaxToApply_ItemAndExceptionList_OneAndAHalf" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.EngineTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EngineTest.getTaxToApply_Item_ExpectedRoundedOutput" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EngineTest.getTaxToApply_ItemAndTwoElementExceptionsList_One" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.EngineTest.getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOutput" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ItemInputManagerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EngineTest.roundNearestFiveCent_Input_ExpectedOutput01" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EngineTest.getTaxToApply_ItemAndExceptionList_OneAndAHalf" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.EngineTest.getTaxToApply_Item_ExpectedRoundedOutput" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EngineTest.roundNearestFiveCent_Input_ExpectedOutput02" />
       </list>
     </recent_temporary>
   </component>
@@ -567,35 +567,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EngineTest - 2018.02.03 at 13h 40m 47s.xml">
+    <history-entry file="EngineTest - 2018.02.03 at 15h 04m 31s.xml">
       <configuration name="EngineTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EngineTest - 2018.02.03 at 13h 44m 21s.xml">
+    <history-entry file="EngineTest - 2018.02.03 at 15h 07m 26s.xml">
       <configuration name="EngineTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EngineTest - 2018.02.03 at 13h 55m 20s.xml">
+    <history-entry file="EngineTest - 2018.02.03 at 15h 08m 40s.xml">
       <configuration name="EngineTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EngineTest_getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOutput - 2018.02.03 at 13h 40m 24s.xml">
-      <configuration name="EngineTest.getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOutput" configurationId="JUnit" />
+    <history-entry file="EngineTest_getTaxToApply_ItemAndExceptionList_OneAndAHalf - 2018.02.03 at 14h 32m 42s.xml">
+      <configuration name="EngineTest.getTaxToApply_ItemAndExceptionList_OneAndAHalf" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EngineTest_getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOutput - 2018.02.03 at 13h 43m 01s.xml">
-      <configuration name="EngineTest.getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOutput" configurationId="JUnit" />
+    <history-entry file="EngineTest_getTaxToApply_ItemAndExceptionList_OneAndAHalf - 2018.02.03 at 15h 02m 55s.xml">
+      <configuration name="EngineTest.getTaxToApply_ItemAndExceptionList_OneAndAHalf" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EngineTest_getTaxToApply_ItemAndTwoElementExceptionsList_One - 2018.02.03 at 13h 44m 46s.xml">
-      <configuration name="EngineTest.getTaxToApply_ItemAndTwoElementExceptionsList_One" configurationId="JUnit" />
+    <history-entry file="EngineTest_getTaxToApply_ItemAndExceptionList_OneAndAHalf - 2018.02.03 at 15h 04m 24s.xml">
+      <configuration name="EngineTest.getTaxToApply_ItemAndExceptionList_OneAndAHalf" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EngineTest_getTaxToApply_ItemAndTwoElementExceptionsList_One - 2018.02.03 at 13h 45m 19s.xml">
-      <configuration name="EngineTest.getTaxToApply_ItemAndTwoElementExceptionsList_One" configurationId="JUnit" />
+    <history-entry file="EngineTest_roundNearestFiveCent_Input_ExpectedOutput01 - 2018.02.03 at 15h 05m 26s.xml">
+      <configuration name="EngineTest.roundNearestFiveCent_Input_ExpectedOutput01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EngineTest_getTaxToApply_ItemAndTwoElementExceptionsList_One - 2018.02.03 at 13h 45m 39s.xml">
-      <configuration name="EngineTest.getTaxToApply_ItemAndTwoElementExceptionsList_One" configurationId="JUnit" />
+    <history-entry file="EngineTest_roundNearestFiveCent_Input_ExpectedOutput01 - 2018.02.03 at 15h 06m 38s.xml">
+      <configuration name="EngineTest.roundNearestFiveCent_Input_ExpectedOutput01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EngineTest_getTaxToApply_Item_ExpectedRoundedOutput - 2018.02.03 at 13h 52m 00s.xml">
-      <configuration name="EngineTest.getTaxToApply_Item_ExpectedRoundedOutput" configurationId="JUnit" />
+    <history-entry file="EngineTest_roundNearestFiveCent_Input_ExpectedOutput01 - 2018.02.03 at 15h 07m 11s.xml">
+      <configuration name="EngineTest.roundNearestFiveCent_Input_ExpectedOutput01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EngineTest_getTaxToApply_Item_ExpectedRoundedOutput - 2018.02.03 at 13h 54m 43s.xml">
-      <configuration name="EngineTest.getTaxToApply_Item_ExpectedRoundedOutput" configurationId="JUnit" />
+    <history-entry file="EngineTest_roundNearestFiveCent_Input_ExpectedOutput01 - 2018.02.03 at 15h 07m 18s.xml">
+      <configuration name="EngineTest.roundNearestFiveCent_Input_ExpectedOutput01" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -620,7 +620,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -694,8 +694,20 @@
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/Engine.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/Engine.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -732,7 +744,6 @@
             <element signature="method#setPrice#2;class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
             <element signature="method#setImported#0;class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
             <element signature="method#setType#0;class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
-            <element signature="docComment;method#calculate_Items_OutputNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#calculate_Items_OutputNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#calculate_Items_OutputTotalNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#calculate_OneItem_TotalEqualsItemPrice#0;class#EngineTest#0" expanded="false" />
@@ -746,12 +757,15 @@
             <element signature="method#calculate_Items_OutputTaxNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#calculate_OneItemList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
             <element signature="method#calculate_TwoItemsList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
-            <element signature="docComment;method#getTaxToApply_ItemAndExceptionList_ResultNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#getTaxToApply_ItemAndExceptionList_ResultNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#getTaxToApply_ItemAndExceptionList_OneAndAHalf#0;class#EngineTest#0" expanded="false" />
             <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_OneAndAHalf#0;class#EngineTest#0" expanded="false" />
             <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_One#0;class#EngineTest#0" expanded="false" />
             <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOneAndAHalf#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOutput#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#getTaxToApply_Item_ExpectedRoundedOutput#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#roundNearestFiveCent_Input_ExpectedOutput01#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#roundNearestFiveCent_Input_ExpectedOutput02#0;class#EngineTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -814,9 +828,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#707#717#0" expanded="true" />
-            <element signature="e#996#1002#0" expanded="true" />
-            <element signature="e#2325#2326#0" expanded="true" />
-            <element signature="e#2381#2382#0" expanded="true" />
+            <element signature="e#1000#1006#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1095,24 +1107,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/junit/framework/TestCase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="117" column="23" lean-forward="false" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="23" />
+          <folding>
+            <element signature="e#2973#2974#0" expanded="true" />
+            <element signature="e#3026#3027#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        <state relative-caret-position="594">
+          <caret line="82" column="16" lean-forward="false" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#707#717#0" expanded="true" />
-            <element signature="e#996#1002#0" expanded="true" />
-            <element signature="e#2325#2326#0" expanded="true" />
-            <element signature="e#2381#2382#0" expanded="true" />
+            <element signature="e#1000#1006#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="435" column="11" lean-forward="true" selection-start-line="435" selection-start-column="11" selection-end-line="435" selection-end-column="11" />
+        <state relative-caret-position="1666">
+          <caret line="456" column="0" lean-forward="false" selection-start-line="456" selection-start-column="0" selection-end-line="456" selection-end-column="0" />
           <folding>
             <element signature="class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
             <element signature="method#setName#0;class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
@@ -1121,7 +1142,6 @@
             <element signature="method#setPrice#2;class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
             <element signature="method#setImported#0;class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
             <element signature="method#setType#0;class#ItemBuilder#0;class#EngineTest#0" expanded="false" />
-            <element signature="docComment;method#calculate_Items_OutputNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#calculate_Items_OutputNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#calculate_Items_OutputTotalNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#calculate_OneItem_TotalEqualsItemPrice#0;class#EngineTest#0" expanded="false" />
@@ -1135,12 +1155,15 @@
             <element signature="method#calculate_Items_OutputTaxNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#calculate_OneItemList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
             <element signature="method#calculate_TwoItemsList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
-            <element signature="docComment;method#getTaxToApply_ItemAndExceptionList_ResultNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#getTaxToApply_ItemAndExceptionList_ResultNotNull#0;class#EngineTest#0" expanded="false" />
             <element signature="method#getTaxToApply_ItemAndExceptionList_OneAndAHalf#0;class#EngineTest#0" expanded="false" />
             <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_OneAndAHalf#0;class#EngineTest#0" expanded="false" />
             <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_One#0;class#EngineTest#0" expanded="false" />
             <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOneAndAHalf#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#getTaxToApply_ItemAndTwoElementExceptionsList_ExpectedOutput#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#getTaxToApply_Item_ExpectedRoundedOutput#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#roundNearestFiveCent_Input_ExpectedOutput01#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#roundNearestFiveCent_Input_ExpectedOutput02#0;class#EngineTest#0" expanded="false" />
           </folding>
         </state>
       </provider>

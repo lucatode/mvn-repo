@@ -30,8 +30,8 @@ public class Engine {
         taxExceptions.add(ItemType.FOOD);
         taxExceptions.add(ItemType.MEDICAL);
 
-        BigDecimal totalTax = new BigDecimal(0.0);
-        BigDecimal total = new BigDecimal(0.0);
+        BigDecimal totalTax = new BigDecimal("0.0");
+        BigDecimal total = new BigDecimal("0.0");
         List<Item> outputItems = new ArrayList<Item>();
 
         for (final Item item: items) {
@@ -55,28 +55,33 @@ public class Engine {
     }
 
     public BigDecimal getTaxToApply(Item item, List<ItemType> exceptions){
-        final double baseTax = 0.10;
-        final double importedTax = 0.05;
-        double taxPerc = 0.00;
+        final BigDecimal baseTax = new BigDecimal("0.10");
+        final BigDecimal importedTax = new BigDecimal("0.05");
+        BigDecimal taxPerc = new BigDecimal("0.00");
 
         if(!exceptions.contains(item.getType())){
-            taxPerc += baseTax;
+            taxPerc = taxPerc.add(baseTax);
         }
 
         if(item.isImported()){
-            taxPerc += importedTax;
+            taxPerc = taxPerc.add(importedTax);
         }
 
         BigDecimal itemPrice = item.getPrice();
-        double taxValue = (itemPrice.doubleValue()* taxPerc);
-        BigDecimal tax = new BigDecimal(roundNearestFiveCent(taxValue));
+        itemPrice.setScale(2, BigDecimal.ROUND_HALF_UP);
+
+        BigDecimal taxValue = (itemPrice.multiply(taxPerc));
+        BigDecimal tax = roundNearestFiveCent(taxValue);
 
         tax = tax.setScale(2, BigDecimal.ROUND_HALF_UP);
         return tax;
     }
 
-    public double roundNearestFiveCent(double value ){
-        return Math.round(value * 20.00) / 20.00;
+    public BigDecimal roundNearestFiveCent(BigDecimal value ){
+        double doubleResult = Math.ceil( value.doubleValue() * 20.00)/20.00;
+        BigDecimal result = BigDecimal.valueOf(doubleResult)
+                .setScale(2,  BigDecimal.ROUND_HALF_UP);
+        return result;
     }
 
 
