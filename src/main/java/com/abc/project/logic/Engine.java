@@ -10,19 +10,21 @@ import java.util.List;
 
 public class Engine {
 
+
+
+    // - tax calc
+    // - calc tax for this item => return tax
+    // - sum to totalTax
+    // - build updated item
+    // - add item to outputList
+    // - total calc
+    // - sum updated items
+    // - build output
+
+    //Evaluate rule parser for more complex problems: https://stackoverflow.com/questions/20763189/creating-a-simple-rule-engine-in-java
+
+
     public Output calculate(List<Item> items){
-
-        // - tax calc
-        // - calc tax for this item => return tax
-        // - sum to totalTax
-        // - build updated item
-        // - add item to outputList
-        // - total calc
-        // - sum updated items
-        // - build output
-
-        //Evaluate rule parser for more complex problems: https://stackoverflow.com/questions/20763189/creating-a-simple-rule-engine-in-java
-
         List<ItemType> taxExceptions = new ArrayList<ItemType>();
         taxExceptions.add(ItemType.BOOK);
         taxExceptions.add(ItemType.FOOD);
@@ -33,28 +35,36 @@ public class Engine {
         List<Item> outputItems = new ArrayList<Item>();
 
         for (final Item item: items) {
-            //TODO: refactor this.
+            //calculate tax
             BigDecimal tax = getTaxToApply(item, taxExceptions);
+            //update tax total
             totalTax = totalTax.add(tax);
+
+            //updating price
             BigDecimal newPrice = item.getPrice().add(tax);
+            //update sum total
             total = total.add(newPrice);
+
+            //build output items
             Item outputItem = new Item(newPrice, item.isImported(), item.getName(), item.getType());
             outputItems.add(outputItem);
         }
-
+        //build output
         return new Output(total, totalTax, outputItems);
 
     }
 
     public BigDecimal getTaxToApply(Item item, List<ItemType> exceptions){
+        final double baseTax = 0.10;
+        final double importedTax = 0.05;
         double taxPerc = 0.00;
 
         if(!exceptions.contains(item.getType())){
-            taxPerc += 0.10;
+            taxPerc += baseTax;
         }
 
         if(item.isImported()){
-            taxPerc += 0.05;
+            taxPerc += importedTax;
         }
 
         BigDecimal itemPrice = item.getPrice();
