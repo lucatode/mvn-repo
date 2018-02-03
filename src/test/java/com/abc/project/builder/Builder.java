@@ -5,6 +5,7 @@ import com.abc.project.logic.rounder.DecimalRounder;
 import com.abc.project.logic.rounder.UpFiveCentRounder;
 import com.abc.project.model.Item;
 import com.abc.project.model.ItemType;
+import com.abc.project.model.Output;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -85,4 +86,41 @@ public class Builder {
 
 
     }
+
+    public static OutputBuilder output() {
+        return new OutputBuilder();
+    }
+    public static class OutputBuilder {
+        private List<Item> items;
+        private BigDecimal total;
+        private BigDecimal taxes;
+
+        public OutputBuilder(){
+            this.items = new ArrayList<Item>();
+            this.total = new BigDecimal("0.00");
+            this.taxes = new BigDecimal("0.00");
+        }
+
+        public OutputBuilder addItem(Item item) {
+            this.items.add(item);
+            return this;
+        }
+
+        public OutputBuilder setTotal(BigDecimal total){
+            this.total = total;
+            return this;
+        }
+
+        public OutputBuilder setTaxes(BigDecimal taxes){
+            this.taxes = taxes;
+            return this;
+        }
+
+        public Output build() {
+            return new Output(this.total, this.taxes, this.items);
+        }
+
+
+    }
+
 }

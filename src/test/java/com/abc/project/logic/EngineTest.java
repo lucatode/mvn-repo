@@ -23,7 +23,7 @@ public class EngineTest {
     @Test
     public void calculate_Items_OutputNotNull(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().build());
         List<Item> items = new ArrayList<Item>();
 
         //Execute
@@ -37,7 +37,7 @@ public class EngineTest {
     @Test
     public void calculate_Items_OutputTotalNotNull(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().build());
         List<Item> items = new ArrayList<Item>();
 
         //Execute
@@ -50,7 +50,7 @@ public class EngineTest {
     @Test //Input: { 14.99, false, STANDARD } - Expected total: 16.49
     public void calculate_OneItem_TotalEqualsItemPrice(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item()
                 .setPrice(new BigDecimal("14.99"))
@@ -69,7 +69,7 @@ public class EngineTest {
     @Test
     public void calculate_TwoItemsList_TotalAsExpected(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().addTypeToException(ItemType.FOOD).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item().setPrice(new BigDecimal("10.00")).setImported(true).setType(ItemType.FOOD).build());
         items.add( Builder.item().setPrice(new BigDecimal("47.50")).setImported(true).setType(ItemType.STANDARD).build());
@@ -82,12 +82,11 @@ public class EngineTest {
         assertTrue(output.getTotal().equals(expectedPrice));
     }
 
-
     //Items
     @Test
     public void calculate_Items_OutputItemListNotNull(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().addTypeToException(ItemType.FOOD).build());
         List<Item> items = new ArrayList<Item>();
 
         //Execute
@@ -100,7 +99,7 @@ public class EngineTest {
     @Test
     public void calculate_OneItemList_OneElementInOutputItemList(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().addTypeToException(ItemType.FOOD).build());
         List<Item> items = new ArrayList<Item>();
         items.add(Builder.item().build());
 
@@ -114,7 +113,7 @@ public class EngineTest {
     @Test //Input: { 14.99, false, STANDARD } - Expected item output price: 16.49
     public void calculate_OneItemList_OutputItemPriceUpdated(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().addTypeToException(ItemType.FOOD).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item()
                 .setPrice(new BigDecimal("14.99"))
@@ -132,9 +131,9 @@ public class EngineTest {
     }
 
     @Test //Input: { 12.49, false, BOOK } - Expected item output price: 12.49
-    public void calculate_OneItemList_OutputItemPriceAsOriginalPrice(){
+    public void calculate_OneItemList_OutputItemPriceAsOriginalPrice()/**/{
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().addTypeToException(ItemType.FOOD).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item()
                 .setPrice(new BigDecimal("12.49"))
@@ -154,7 +153,7 @@ public class EngineTest {
     @Test //Input: { 47.50, true, STANDARD } - Expected item output price: 54.65
     public void calculate_OneImportedItemList_OutputItemPriceUpdated(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().addTypeToException(ItemType.FOOD).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item()
                 .setPrice(new BigDecimal("47.50"))
@@ -174,7 +173,7 @@ public class EngineTest {
     @Test //Input: { 10.00, true, FOOD } - Expected item output price: 10.50
     public void calculate_OneFOODImportedItemList_OutputItemPriceUpdated(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().addTypeToException(ItemType.FOOD).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item()
                 .setPrice(new BigDecimal("10.00"))
@@ -195,7 +194,7 @@ public class EngineTest {
     @Test
     public void calculate_Items_OutputTaxNotNull(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().addTypeToException(ItemType.FOOD).build());
         List<Item> items = new ArrayList<Item>();
 
         //Execute
@@ -208,7 +207,7 @@ public class EngineTest {
     @Test //Input: { 14.99, false, STANDARD } - Expected tax: 1.50
     public void calculate_OneItemList_TaxAsExpected(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().addTypeToException(ItemType.FOOD).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item().setPrice(new BigDecimal("14.99")).setImported(false).setType(ItemType.STANDARD).build());
         BigDecimal expectedTax = new BigDecimal("1.50");
@@ -223,7 +222,7 @@ public class EngineTest {
     @Test //Input: [{ 10.00, true, FOOD },{ 47.50, true, STANDARD }] - Expected tax: 7.65
     public void calculate_TwoItemsList_TaxAsExpected(){
         //Setup
-        Engine engine = new Engine(taxCalculator);
+        Engine engine = new Engine(Builder.taxCalculator().addTypeToException(ItemType.FOOD).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item().setPrice(new BigDecimal("10.00")).setImported(true).setType(ItemType.FOOD).build());
         items.add( Builder.item().setPrice(new BigDecimal("47.50")).setImported(true).setType(ItemType.STANDARD).build());

@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class Output {
-    private BigDecimal total;
-    private BigDecimal tax;
-    private List<Item> items;
+    private final BigDecimal total;
+    private final BigDecimal tax;
+    private final List<Item> items;
 
     public Output(
             BigDecimal total,
