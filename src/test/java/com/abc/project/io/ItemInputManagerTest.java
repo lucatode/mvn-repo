@@ -23,9 +23,9 @@ public class ItemInputManagerTest {
     @Test
     public void getList_fromJsonString_ListNotNull(){
         //Setup
-        final InputManager<Item> inputManager = new ItemsInputManager(gson);
+        final ItemsInputManager inputManager = new ItemsInputManager();
         //Execute
-        List<Item> items = inputManager.getList(jsonInput);
+        List<Item> items = inputManager.getList(gson, jsonInput);
 
         //Verify
         assertTrue(items != null);
@@ -34,10 +34,10 @@ public class ItemInputManagerTest {
     @Test
     public void getList_fromJsonString_ListCountGreaterThanZero(){
         //Setup
-        final InputManager<Item> inputManager = new ItemsInputManager(gson);
+        final ItemsInputManager inputManager = new ItemsInputManager();
 
         //Execute
-        List<Item> items = inputManager.getList(jsonInput);
+        List<Item> items = inputManager.getList(gson, jsonInput);
 
         //Verify
         assertTrue(items.size() > 0);
@@ -47,10 +47,10 @@ public class ItemInputManagerTest {
     @Test
     public void getList_fromJsonString_firstElementContainsPrice(){
         //Setup
-        final InputManager<Item> inputManager = new ItemsInputManager(gson);
+        final ItemsInputManager inputManager = new ItemsInputManager();
 
         //Execute
-        List<Item> items = inputManager.getList(jsonInput);
+        List<Item> items = inputManager.getList(gson, jsonInput);
 
         //Verify
         Item firstItem = items.get(0);
@@ -60,11 +60,11 @@ public class ItemInputManagerTest {
     @Test
     public void getList_fromJsonString_firstElementPriceAsExpected(){
         //Setup
-        final InputManager<Item> inputManager = new ItemsInputManager(gson);
+        final ItemsInputManager inputManager = new ItemsInputManager();
         BigDecimal expectedPrice = new BigDecimal("10.00");
 
         //Execute
-        List<Item> items = inputManager.getList(jsonInput);
+        List<Item> items = inputManager.getList(gson, jsonInput);
 
         //Verify
         Item firstItem = items.get(0);
@@ -75,10 +75,10 @@ public class ItemInputManagerTest {
     @Test
     public void getList_fromJsonString_firstElementIsNotImported(){
         //Setup
-        final InputManager<Item> inputManager = new ItemsInputManager(gson);
+        final ItemsInputManager inputManager = new ItemsInputManager();
 
         //Execute
-        List<Item> items = inputManager.getList(jsonInput);
+        List<Item> items = inputManager.getList(gson, jsonInput);
 
         //Verify
         Item firstItem = items.get(0);
@@ -89,11 +89,11 @@ public class ItemInputManagerTest {
     @Test
     public void getList_fromJsonString_firstElementNameAsExpected(){
         //Setup
-        final InputManager<Item> inputManager = new ItemsInputManager(gson);
+        final ItemsInputManager inputManager = new ItemsInputManager();
         final String expectedName = "Item Name";
 
         //Execute
-        List<Item> items = inputManager.getList(jsonInput);
+        List<Item> items = inputManager.getList(gson, jsonInput);
 
         //Verify
         Item firstItem = items.get(0);
@@ -104,11 +104,11 @@ public class ItemInputManagerTest {
     @Test
     public void getList_fromJsonString_firstElementTypeSTANDARD(){
         //Setup
-        final InputManager<Item> inputManager = new ItemsInputManager(gson);
+        final ItemsInputManager inputManager = new ItemsInputManager();
         final ItemType expectedType = ItemType.STANDARD;
 
         //Execute
-        List<Item> items = inputManager.getList(jsonInput);
+        List<Item> items = inputManager.getList(gson, jsonInput);
 
         //Verify
         Item firstItem = items.get(0);
@@ -118,11 +118,11 @@ public class ItemInputManagerTest {
     @Test
     public void getList_fromJsonString_firstElementTypeFOOD(){
         //Setup
-        final InputManager<Item> inputManager = new ItemsInputManager(gson);
+        final ItemsInputManager inputManager = new ItemsInputManager();
         final ItemType expectedType = ItemType.FOOD;
 
         //Execute
-        List<Item> items = inputManager.getList(jsonInputFood);
+        List<Item> items = inputManager.getList(gson, jsonInputFood);
 
         //Verify
         Item firstItem = items.get(0);
@@ -132,11 +132,11 @@ public class ItemInputManagerTest {
     @Test
     public void getList_fromJsonString_firstElementTypeMEDICAL(){
         //Setup
-        final InputManager<Item> inputManager = new ItemsInputManager(gson);
+        final ItemsInputManager inputManager = new ItemsInputManager();
         final ItemType expectedType = ItemType.MEDICAL;
 
         //Execute
-        List<Item> items = inputManager.getList(jsonInputMedical);
+        List<Item> items = inputManager.getList(gson, jsonInputMedical);
 
         //Verify
         Item firstItem = items.get(0);
@@ -146,11 +146,11 @@ public class ItemInputManagerTest {
     @Test
     public void getList_fromJsonString_firstElementTypeBOOK(){
         //Setup
-        final InputManager<Item> inputManager = new ItemsInputManager(gson);
+        final ItemsInputManager inputManager = new ItemsInputManager();
         final ItemType expectedType = ItemType.BOOK;
 
         //Execute
-        List<Item> items = inputManager.getList(jsonInputBook);
+        List<Item> items = inputManager.getList(gson, jsonInputBook);
 
         //Verify
         Item firstItem = items.get(0);
@@ -161,10 +161,10 @@ public class ItemInputManagerTest {
     @Test
     public void getList_fromJsonString_ListSizeEqualsTwo(){
         //Setup
-        final InputManager<Item> inputManager = new ItemsInputManager(gson);
+        final ItemsInputManager inputManager = new ItemsInputManager();
 
         //Execute
-        List<Item> items = inputManager.getList(jsonMultipleItemInput);
+        List<Item> items = inputManager.getList(gson, jsonMultipleItemInput);
 
         //Verify
         assertTrue(items.size() == 2);
