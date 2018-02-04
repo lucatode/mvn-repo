@@ -38,7 +38,7 @@ An application that prints out of a given shopping basket
 
 
 ## Test
-* Unit tests to test every component
+* Unit tests for logic and io components
 * Integration tests on some given examples
 
 
