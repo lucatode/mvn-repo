@@ -9,10 +9,10 @@ import java.util.List;
 
 public class TaxCalculator implements Calculator<Item, BigDecimal> {
 
-    final DecimalRounder rounder;
-    final List<ItemType> exceptions;
-    final BigDecimal baseTax = new BigDecimal("0.10");
-    final BigDecimal importedTax = new BigDecimal("0.05");
+    private final DecimalRounder rounder;
+    private final List<ItemType> exceptions;
+    private final BigDecimal baseTax = new BigDecimal("0.10");
+    private final BigDecimal importedTax = new BigDecimal("0.05");
 
     public TaxCalculator(
             DecimalRounder rounder,

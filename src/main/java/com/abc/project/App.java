@@ -1,7 +1,9 @@
 package com.abc.project;
 
-import com.abc.project.io.ItemsInputManager;
-import com.abc.project.io.JsonWriter;
+import com.abc.project.io.GsonInputManager;
+import com.abc.project.io.InputManager;
+import com.abc.project.io.GsonOutputManager;
+import com.abc.project.io.OutputManager;
 import com.abc.project.logic.Engine;
 import com.abc.project.logic.calculator.TaxCalculator;
 import com.abc.project.logic.rounder.UpFiveCentRounder;
@@ -18,22 +20,36 @@ public class App {
     public static void main(String[] args){
 
         //Setup
-        final ItemsInputManager inputManager = new ItemsInputManager();
-        final Engine engine = new Engine(CreateTaxCalculator());
-        final JsonWriter jsonWriter = new JsonWriter();
         final Gson gson = new Gson();
+        final InputManager<Item> inputManager = new GsonInputManager(gson);
+        final Engine engine = new Engine(LoadConfig());
+        final OutputManager<Output> outputManager = new GsonOutputManager(gson);
 
-        //Execution
         // - Input
-        List<Item> items = inputManager.getList(gson, input_example_1());
+        List<Item> items = inputManager.getList(input_example_1());
         // - Calculate
         Output output = engine.calculate(items);
         // - Output
-        String outputString = jsonWriter.write(gson,output);
+        String outputString = outputManager.write(output);
         // - Print
         System.out.println(outputString);
 
+    }
 
+    private static TaxCalculator LoadConfig(){
+        final List<ItemType> taxException = new ArrayList<>();
+        taxException.add(ItemType.FOOD);
+        taxException.add(ItemType.BOOK);
+        taxException.add(ItemType.MEDICAL);
+
+        final TaxCalculator tc = new TaxCalculator(
+                new UpFiveCentRounder(),
+                taxException,
+                new BigDecimal("0.10"),
+                new BigDecimal("0.05")
+        );
+
+        return tc;
     }
 
     private static String input_example_1(){
@@ -59,19 +75,4 @@ public class App {
         return inputExample01;
     }
 
-    private static TaxCalculator CreateTaxCalculator(){
-        final List<ItemType> taxException = new ArrayList<>();
-        taxException.add(ItemType.FOOD);
-        taxException.add(ItemType.BOOK);
-        taxException.add(ItemType.MEDICAL);
-
-        final TaxCalculator tc = new TaxCalculator(
-                new UpFiveCentRounder(),
-                taxException,
-                new BigDecimal("0.10"),
-                new BigDecimal("0.05")
-        );
-
-        return tc;
-    }
 }

@@ -6,6 +6,7 @@ import com.abc.project.logic.rounder.UpFiveCentRounder;
 import com.abc.project.model.Item;
 import com.abc.project.model.ItemType;
 import com.abc.project.model.Output;
+import com.google.gson.Gson;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -61,6 +62,12 @@ public class Builder {
             return new Item(price, imported, name, type, quantity);
         }
 
+        public String toJson(){
+            Item[] items = new Item[1];
+            items[0] = new Item(price, imported, name, type, quantity);
+            String json = new Gson().toJson(items, Item[].class);
+            return json;
+        }
 
 
     }

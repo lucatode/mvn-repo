@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface InputManager<T> {
 
-    List<T> getList(String jsonString);
+    List<T> getList(String str);
 
 }

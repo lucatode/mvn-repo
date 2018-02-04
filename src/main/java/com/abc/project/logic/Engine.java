@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Engine {
 
-    private Calculator<Item,BigDecimal> taxCalculator;
+    private final Calculator<Item,BigDecimal> taxCalculator;
 
     public Engine(Calculator<Item,BigDecimal> taxCalculator) {
         this.taxCalculator = taxCalculator;
