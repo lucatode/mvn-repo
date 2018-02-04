@@ -12,7 +12,7 @@ Calculate the amount sum.
 
 
 
-### INPUT EXAMPLE:
+### Input example:
 ```
 [{
   "quantity": 1,
@@ -20,29 +20,16 @@ Calculate the amount sum.
   "imported": false,
   "price": 12.49,
   "type": "BOOK"
-},{
-  "quantity": 1,
-  "name": "music CD",
-  "imported": false,
-  "price": 14.99,
-  "type": "STANDARD"
-},{
-  "quantity": 1,
-  "name": "chocolate bar",
-  "imported": false,
-  "price": 0.85,
-  "type": "FOOD"
-}]
+}, ... ]
 ```
 
 
-### OUTPUT EXPECTED:
+### Output expected:
 ```
 {
 "items":[
   {"name":"book","quantity":1,"imported":false,"price":12.49,"type":"BOOK"},
-  {"name":"music CD","quantity":1,"imported":false,"price":16.49,"type":"STANDARD"},
-  {"name":"chocolate bar","quantity":1,"imported":false,"price":0.85,"type":"FOOD"}
+  ...
 ],
 "total":29.83,
 "taxes":1.50
