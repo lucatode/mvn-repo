@@ -10,6 +10,8 @@ Calculate all taxes applied.
 Calculate the amount sum.
 
 
+
+
 ### INPUT EXAMPLE:
 ```
 [{
@@ -38,7 +40,7 @@ Calculate the amount sum.
 ```
 {
 "items":[
-  {"name":"book","quantity":1,"imported":true,"price":12.49,"type":"BOOK"},
+  {"name":"book","quantity":1,"imported":false,"price":12.49,"type":"BOOK"},
   {"name":"music CD","quantity":1,"imported":false,"price":16.49,"type":"STANDARD"},
   {"name":"chocolate bar","quantity":1,"imported":false,"price":0.85,"type":"FOOD"}
 ],
