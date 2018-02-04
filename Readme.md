@@ -1,16 +1,11 @@
-https://travis-ci.org/lucatode/mvn-repo
-
 # Receipt application
 An application that prints out of a given shopping basket
 
 ## Problem
-Apply 10% tax on all purchased items except books, food and medicals.
-Apply an additional 5% tax on all imported items.
-Calculate all taxes applied.
-Calculate the amount sum.
-
-
-
+* Apply 10% tax on all purchased items except books, food and medicals.
+* Apply an additional 5% tax on all imported items.
+* Calculate all taxes applied.
+* Calculate the amount sum.
 
 ### Input example:
 ```
@@ -37,12 +32,15 @@ Calculate the amount sum.
 ```
 
 ## Application
-The application is written in java. I've used Maven as automation tool.
-It's linked to Travis CI at https://travis-ci.org/lucatode/mvn-repo
+* The application is written in java. 
+* Build with Maven.
+* Linked to Travis CI at https://travis-ci.org/lucatode/mvn-repo
 
-For additional information check Application.md
 
 ## Test
+* Unit tests to test every component
+* Integration tests on some given examples
+
 
 
 
