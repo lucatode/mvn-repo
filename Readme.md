@@ -36,3 +36,18 @@ Calculate the amount sum.
 }
 ```
 
+## Application
+The application is written in java. I've used Maven as automation tool.
+It's linked to Travis CI at https://travis-ci.org/lucatode/mvn-repo
+
+For additional information check Application.md
+
+## Test
+
+
+
+
+
+
+
+
