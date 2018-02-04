@@ -1,9 +1,17 @@
 https://travis-ci.org/lucatode/mvn-repo
 
+# Receipt application
+An application that prints out of a given shopping basket
+
+## Problem
+Apply 10% tax on all purchased items except books, food and medicals.
+Apply an additional 5% tax on all imported items.
+Calculate all taxes applied.
+Calculate the amount sum.
 
 
-#INPUT EXAMPLE:
-`
+### INPUT EXAMPLE:
+```
 [{
   "quantity": 1,
   "name": "book",
@@ -23,10 +31,10 @@ https://travis-ci.org/lucatode/mvn-repo
   "price": 0.85,
   "type": "FOOD"
 }]
+```
 
-`
 
-#OUTPUT EXPECTED:
+### OUTPUT EXPECTED:
 ```
 {
 "items":[
