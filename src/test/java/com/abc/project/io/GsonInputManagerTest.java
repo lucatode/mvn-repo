@@ -13,12 +13,11 @@ import static junit.framework.TestCase.assertFalse;
 import static junit.framework.TestCase.assertTrue;
 
 public class GsonInputManagerTest {
-    final String jsonInput = Builder.item().toJson();
-    final String jsonInputFood = Builder.item().setType(ItemType.FOOD).toJson();
-    final String jsonInputBook = Builder.item().setType(ItemType.BOOK).toJson();
-    final String jsonInputMedical = Builder.item().setType(ItemType.MEDICAL).toJson();
-    final String jsonMultipleItemInput = "[{ \"price\":10.00, \"imported\": false, \"name\":\"Item 1\", \"type\":\"STANDARD\" }," +
-            "{ \"price\":5.00, \"imported\": false, \"name\":\"Item 2\", \"type\":\"STANDARD\" }]";
+    final String jsonInput = Builder.item().toJsonArray();
+    final String jsonInputFood = Builder.item().setType(ItemType.FOOD).toJsonArray();
+    final String jsonInputBook = Builder.item().setType(ItemType.BOOK).toJsonArray();
+    final String jsonInputMedical = Builder.item().setType(ItemType.MEDICAL).toJsonArray();
+    final String jsonMultipleItemInput = "["+Builder.item().toJson()+"," +Builder.item().setPrice("5.00").setName("Item 2").toJson()+"]";
 
     final Gson gson = new Gson();
 

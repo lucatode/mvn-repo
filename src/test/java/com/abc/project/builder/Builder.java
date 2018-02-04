@@ -62,12 +62,18 @@ public class Builder {
             return new Item(price, imported, name, type, quantity);
         }
 
-        public String toJson(){
+        public String toJsonArray(){
             Item[] items = new Item[1];
             items[0] = new Item(price, imported, name, type, quantity);
             String json = new Gson().toJson(items, Item[].class);
             return json;
         }
+
+        public String toJson(){
+            String json = new Gson().toJson(new Item(price, imported, name, type, quantity), Item.class);
+            return json;
+        }
+
 
 
     }
