@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3247d0c3-70d7-4f4d-af7a-c756f751ab20" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/PercentageCalculator.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/TaxPercentageCalculator.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/abc/project/logic/PercentageCalculatorTest.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Readme.md" afterPath="$PROJECT_DIR$/Readme.md" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abc/project/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/abc/project/App.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abc/project/io/GsonInputManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/abc/project/io/GsonInputManager.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abc/project/io/GsonOutputManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/abc/project/io/GsonOutputManager.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abc/project/logic/Engine.java" afterPath="$PROJECT_DIR$/src/main/java/com/abc/project/logic/Engine.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/Calculator.java" afterPath="$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/Calculator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/TaxCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/TaxCalculator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abc/project/model/Item.java" afterPath="$PROJECT_DIR$/src/main/java/com/abc/project/data/Item.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abc/project/model/ItemType.java" afterPath="$PROJECT_DIR$/src/main/java/com/abc/project/data/ItemType.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abc/project/model/Output.java" afterPath="$PROJECT_DIR$/src/main/java/com/abc/project/data/Output.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/abc/project/IntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/abc/project/IntegrationTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/abc/project/builder/Builder.java" afterPath="$PROJECT_DIR$/src/test/java/com/abc/project/builder/Builder.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/abc/project/io/GsonInputManagerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/abc/project/io/GsonInputManagerTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/abc/project/io/GsonOutputManagerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/abc/project/io/GsonOutputManagerTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/abc/project/logic/TaxCalculatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/abc/project/logic/TaxCalculatorTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,55 +34,117 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Readme.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Readme.md">
+      <file leaf-file-name="TaxPercentageCalculator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/TaxPercentageCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example_01.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/resources/example_01.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example_02.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/resources/example_02.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Output.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/model/Output.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="136">
+              <caret line="8" column="68" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="68" />
               <folding>
-                <element signature="method#Output#0;class#Output#0" expanded="false" />
-                <element signature="method#equals#0;class#Output#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GsonOutputManagerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/io/GsonOutputManagerTest.java">
+      <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="34">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaxCalculator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/TaxCalculator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaxCalculatorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/TaxCalculatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding>
+                <element signature="method#calculate_Item_ResultNotNull#0;class#TaxCalculatorTest#0" expanded="false" />
+                <element signature="method#calculate_Item_ExpectedOutput00#0;class#TaxCalculatorTest#0" expanded="false" />
+                <element signature="method#calculate_Item_ExpectedOutput01#0;class#TaxCalculatorTest#0" expanded="false" />
+                <element signature="method#calculate_Item_ExpectedOutput02#0;class#TaxCalculatorTest#0" expanded="false" />
+                <element signature="method#calculate_Item_ExpectedOutput03#0;class#TaxCalculatorTest#0" expanded="false" />
+                <element signature="method#calculate_Item_ExpectedOutput04#0;class#TaxCalculatorTest#0" expanded="false" />
+                <element signature="method#calculate_Item_ExpectedOutput05#0;class#TaxCalculatorTest#0" expanded="false" />
+                <element signature="method#calculate_ItemWithQuantityTwo_ExpectedOutput06#0;class#TaxCalculatorTest#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+              <folding>
+                <element signature="method#LoadConfig#0;class#App#0" expanded="false" />
+                <element signature="method#input_example_1#0;class#App#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EngineTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="651">
+              <caret line="216" column="53" lean-forward="false" selection-start-line="216" selection-start-column="53" selection-end-line="216" selection-end-column="53" />
+              <folding>
+                <element signature="docComment;method#calculate_Items_OutputNotNull#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_Items_OutputNotNull#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_Items_OutputTotalNotNull#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_OneItem_TotalEqualsItemPrice#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_TwoItemsList_TotalAsExpected#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_Items_OutputItemListNotNull#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_OneItemList_OneElementInOutputItemList#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_OneItemList_OutputItemPriceUpdated#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_OneItemList_OutputItemPriceAsOriginalPrice#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_OneImportedItemList_OutputItemPriceUpdated#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_OneFOODImportedItemList_OutputItemPriceUpdated#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_Items_OutputTaxNotNull#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_OneItemList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
+                <element signature="method#calculate_TwoItemsList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntegrationTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/IntegrationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="64" column="91" lean-forward="false" selection-start-line="64" selection-start-column="91" selection-end-line="64" selection-end-column="91" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PercentageCalculatorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/PercentageCalculatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#calculate_item_percentageExpected#0;class#PercentageCalculatorTest#0" expanded="false" />
+                <element signature="method#calculate_item_percentageExpected01#0;class#PercentageCalculatorTest#0" expanded="false" />
+                <element signature="method#calculate_item_percentageExpected02#0;class#PercentageCalculatorTest#0" expanded="false" />
+                <element signature="method#calculate_item_percentageExpected03#0;class#PercentageCalculatorTest#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,8 +152,8 @@
       <file leaf-file-name="Builder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/builder/Builder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="150" column="24" lean-forward="false" selection-start-line="150" selection-start-column="24" selection-end-line="150" selection-end-column="24" />
+            <state relative-caret-position="459">
+              <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
               <folding>
                 <element signature="class#ItemBuilder#0;class#Builder#0" expanded="false" />
                 <element signature="method#setName#0;class#ItemBuilder#0;class#Builder#0" expanded="false" />
@@ -81,14 +162,14 @@
                 <element signature="method#setPrice#2;class#ItemBuilder#0;class#Builder#0" expanded="false" />
                 <element signature="method#setImported#0;class#ItemBuilder#0;class#Builder#0" expanded="false" />
                 <element signature="method#setType#0;class#ItemBuilder#0;class#Builder#0" expanded="false" />
-                <element signature="e#1810#1811#0" expanded="true" />
-                <element signature="e#1888#1889#0" expanded="true" />
+                <element signature="e#2041#2042#0" expanded="true" />
+                <element signature="e#2119#2120#0" expanded="true" />
                 <element signature="class#TaxCalculatorBuilder#0;class#Builder#0" expanded="false" />
-                <element signature="method#TaxCalculatorBuilder#0;class#TaxCalculatorBuilder#0;class#Builder#0" expanded="false" />
-                <element signature="method#addTypeToExceptions#0;class#TaxCalculatorBuilder#0;class#Builder#0" expanded="false" />
-                <element signature="method#build#0;class#TaxCalculatorBuilder#0;class#Builder#0" expanded="false" />
-                <element signature="e#3253#3254#0" expanded="true" />
-                <element signature="e#3295#3296#0" expanded="true" />
+                <element signature="e#2954#2964#0" expanded="true" />
+                <element signature="e#3427#3428#0" expanded="true" />
+                <element signature="e#3515#3516#0" expanded="true" />
+                <element signature="class#TaxPercentageCalculatorBuilder#0;class#Builder#0" expanded="false" />
+                <element signature="class#OutputBuilder#0;class#Builder#0" expanded="false" />
                 <element signature="method#OutputBuilder#0;class#OutputBuilder#0;class#Builder#0" expanded="false" />
                 <element signature="method#addItem#0;class#OutputBuilder#0;class#Builder#0" expanded="false" />
                 <element signature="method#setTotal#0;class#OutputBuilder#0;class#Builder#0" expanded="false" />
@@ -106,42 +187,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="example_03.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/resources/example_03.json">
+      <file leaf-file-name="PercentageCalculator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/PercentageCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="output_01.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/resources/output_01.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="54" lean-forward="false" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="output_02.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/resources/output_02.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="output_03.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/resources/output_03.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="119">
+              <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,6 +230,7 @@
       <find>write(new Gson(), o);</find>
       <find>getList(gson, jsonInput);</find>
       <find>GsonOutputManager();</find>
+      <find>AndTwoElementExceptionsList</find>
     </findStrings>
     <replaceStrings>
       <replace>List</replace>
@@ -206,7 +260,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/abc/project/test/businesslogic/com/abc/project/IntegrationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/io/ItemsInputManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/io/JsonReader.java" />
@@ -222,13 +275,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/logic/rounder/RounderUpToNearestFiveCent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/logic/rounder/UpFiveCentRounder.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/logic/UpFiveCentRounderTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/logic/JsonWriterTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/resources/example_02.json" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/resources/example_03.json" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/resources/example_01.json" />
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/model/Item.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/abc/project/logic/TaxCalculatorTest.java" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/io/JsonWriterTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/io/ItemsInputManager.java" />
@@ -238,19 +289,28 @@
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/io/JsonWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/io/GsonOutputManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/io/ItemInputManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/App.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/io/GsonInputManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/abc/project/IntegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/abc/project/builder/Builder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/helper/Builder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/logic/Engine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/TaxCalculator.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/resources/output_02.json" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/resources/output_03.json" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/io/GsonOutputManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abc/project/model/Output.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/abc/project/resources/output_01.json" />
         <option value="$PROJECT_DIR$/Readme.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/data/Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/data/ItemType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/data/Output.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/TaxCalculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/abc/project/logic/TaxCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/abc/project/IntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/PercentageCalculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/TaxPercentageCalculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/abc/project/builder/Builder.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/abc/project/logic/PercentageCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abc/project/App.java" />
       </list>
     </option>
   </component>
@@ -308,7 +368,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -351,6 +411,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="taxcalculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="taxcalculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="taxcalculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="taxcalculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -360,7 +438,18 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="calculator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="taxcalculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="taxcalculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="rounder" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="taxcalculator" type="b2602c69:ProjectViewProjectNode" />
@@ -410,20 +499,11 @@
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="taxcalculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="taxcalculator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -460,6 +540,25 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.abc.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.abc.project.App" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="taxcalculator" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -494,44 +593,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="GsonInputManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PercentageCalculatorTest.calculate_item_percentageExpected01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.abc.project.io.*" />
+          <option name="PATTERN" value="com.abc.project.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="taxcalculator" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.abc.project.io" />
-      <option name="MAIN_CLASS_NAME" value="com.abc.project.io.GsonInputManagerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="GsonInputManagerTest.getList_fromJsonString_ListSizeEqualsTwo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.abc.project.io.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="taxcalculator" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.abc.project.io" />
-      <option name="MAIN_CLASS_NAME" value="com.abc.project.io.GsonInputManagerTest" />
-      <option name="METHOD_NAME" value="getList_fromJsonString_ListSizeEqualsTwo" />
+      <option name="PACKAGE_NAME" value="com.abc.project.logic" />
+      <option name="MAIN_CLASS_NAME" value="com.abc.project.logic.PercentageCalculatorTest" />
+      <option name="METHOD_NAME" value="calculate_item_percentageExpected01" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -544,19 +618,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="GsonInputManagerTest.getList_fromJsonString_firstElementNameAsExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PercentageCalculatorTest.calculate_item_percentageExpected02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.abc.project.io.*" />
+          <option name="PATTERN" value="com.abc.project.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="taxcalculator" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.abc.project.io" />
-      <option name="MAIN_CLASS_NAME" value="com.abc.project.io.GsonInputManagerTest" />
-      <option name="METHOD_NAME" value="getList_fromJsonString_firstElementNameAsExpected" />
+      <option name="PACKAGE_NAME" value="com.abc.project.logic" />
+      <option name="MAIN_CLASS_NAME" value="com.abc.project.logic.PercentageCalculatorTest" />
+      <option name="METHOD_NAME" value="calculate_item_percentageExpected02" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -569,19 +643,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="GsonInputManagerTest.getList_fromJsonString_firstElementPriceAsExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PercentageCalculatorTest.calculate_item_percentageExpected03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.abc.project.io.*" />
+          <option name="PATTERN" value="com.abc.project.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="taxcalculator" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.abc.project.io" />
-      <option name="MAIN_CLASS_NAME" value="com.abc.project.io.GsonInputManagerTest" />
-      <option name="METHOD_NAME" value="getList_fromJsonString_firstElementPriceAsExpected" />
+      <option name="PACKAGE_NAME" value="com.abc.project.logic" />
+      <option name="MAIN_CLASS_NAME" value="com.abc.project.logic.PercentageCalculatorTest" />
+      <option name="METHOD_NAME" value="calculate_item_percentageExpected03" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -656,18 +730,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in taxcalculator" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.GsonInputManagerTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.GsonInputManagerTest.getList_fromJsonString_firstElementPriceAsExpected" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.GsonInputManagerTest.getList_fromJsonString_firstElementNameAsExpected" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.GsonInputManagerTest.getList_fromJsonString_ListSizeEqualsTwo" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PercentageCalculatorTest.calculate_item_percentageExpected01" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.PercentageCalculatorTest.calculate_item_percentageExpected02" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PercentageCalculatorTest.calculate_item_percentageExpected03" />
+      <item index="4" class="java.lang.String" itemvalue="Application.App" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in taxcalculator" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.GsonInputManagerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.GsonInputManagerTest.getList_fromJsonString_ListSizeEqualsTwo" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.GsonInputManagerTest.getList_fromJsonString_firstElementNameAsExpected" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.GsonInputManagerTest.getList_fromJsonString_firstElementPriceAsExpected" />
+        <item index="1" class="java.lang.String" itemvalue="Application.App" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PercentageCalculatorTest.calculate_item_percentageExpected03" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PercentageCalculatorTest.calculate_item_percentageExpected02" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PercentageCalculatorTest.calculate_item_percentageExpected01" />
       </list>
     </recent_temporary>
   </component>
@@ -688,40 +762,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_taxcalculator - 2018.02.04 at 01h 45m 38s.xml">
+    <history-entry file="All_in_taxcalculator - 2018.02.05 at 00h 12m 17s.xml">
       <configuration name="All in taxcalculator" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_taxcalculator - 2018.02.04 at 01h 57m 45s.xml">
+    <history-entry file="All_in_taxcalculator - 2018.02.05 at 00h 24m 08s.xml">
       <configuration name="All in taxcalculator" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_taxcalculator - 2018.02.04 at 02h 15m 28s.xml">
+    <history-entry file="All_in_taxcalculator - 2018.02.05 at 00h 28m 35s.xml">
       <configuration name="All in taxcalculator" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_taxcalculator - 2018.02.04 at 02h 18m 43s.xml">
-      <configuration name="All in taxcalculator" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_taxcalculator - 2018.02.04 at 20h 04m 57s.xml">
-      <configuration name="All in taxcalculator" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_taxcalculator - 2018.02.04 at 20h 05m 50s.xml">
-      <configuration name="All in taxcalculator" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GsonInputManagerTest - 2018.02.04 at 02h 12m 16s.xml">
-      <configuration name="GsonInputManagerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GsonInputManagerTest - 2018.02.04 at 02h 12m 45s.xml">
-      <configuration name="GsonInputManagerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GsonInputManagerTest - 2018.02.04 at 02h 13m 38s.xml">
-      <configuration name="GsonInputManagerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="GsonInputManagerTest_getList_fromJsonString_ListSizeEqualsTwo - 2018.02.04 at 02h 12m 52s.xml">
       <configuration name="GsonInputManagerTest.getList_fromJsonString_ListSizeEqualsTwo" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PercentageCalculatorTest_calculate_item_percentage - 2018.02.05 at 00h 18m 43s.xml">
+      <configuration name="PercentageCalculatorTest.calculate_item_percentage" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PercentageCalculatorTest_calculate_item_percentage - 2018.02.05 at 00h 18m 52s.xml">
+      <configuration name="PercentageCalculatorTest.calculate_item_percentage" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PercentageCalculatorTest_calculate_item_percentageExpected01 - 2018.02.05 at 00h 21m 19s.xml">
+      <configuration name="PercentageCalculatorTest.calculate_item_percentageExpected01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PercentageCalculatorTest_calculate_item_percentageExpected01 - 2018.02.05 at 00h 21m 49s.xml">
+      <configuration name="PercentageCalculatorTest.calculate_item_percentageExpected01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PercentageCalculatorTest_calculate_item_percentageExpected02 - 2018.02.05 at 00h 22m 56s.xml">
+      <configuration name="PercentageCalculatorTest.calculate_item_percentageExpected02" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PercentageCalculatorTest_calculate_item_percentageExpected03 - 2018.02.05 at 00h 23m 43s.xml">
+      <configuration name="PercentageCalculatorTest.calculate_item_percentageExpected03" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -736,7 +809,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18123667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18283582" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -759,36 +832,48 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java</url>
-          <line>157</line>
+          <line>164</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java</url>
-          <line>198</line>
+          <line>207</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java</url>
-          <line>218</line>
+          <line>228</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/abc/project/IntegrationTest.java</url>
-          <line>66</line>
+          <line>70</line>
           <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/abc/project/builder/Builder.java</url>
-          <line>68</line>
+          <line>72</line>
           <properties />
           <option name="timeStamp" value="51" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/TaxCalculatorTest.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/TaxCalculatorTest.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="55" />
+      <option name="time" value="57" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -798,10 +883,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/test/businesslogic/com/abc/project/IntegrationTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/test.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/io/ItemsInputManager.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/io/JsonReader.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/io/GsonReaderTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/io/GsonReader.java" />
@@ -809,39 +890,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="117" column="23" lean-forward="false" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/builder/ItemBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/rounder/RounderUpToNearestFiveCent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/JsonWriterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/builder/ItemBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/rounder/RounderUpToNearestFiveCent.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/JsonWriterTest.java" />
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_152/src.zip!/java/lang/ClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="1095" column="30" lean-forward="false" selection-start-line="1095" selection-start-column="18" selection-end-line="1095" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,7 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -857,7 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
           <caret line="91" column="11" lean-forward="false" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -881,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,7 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,7 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="357" column="18" lean-forward="false" selection-start-line="357" selection-start-column="18" selection-end-line="357" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -925,8 +977,8 @@
         <state relative-caret-position="102">
           <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding>
-            <element signature="e#232#233#0" expanded="false" />
-            <element signature="e#264#265#0" expanded="false" />
+            <element signature="e#231#232#0" expanded="false" />
+            <element signature="e#263#264#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -963,72 +1015,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/model/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <element signature="method#calculate_Items_OutputNotNull#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_Items_OutputTotalNotNull#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_OneItem_TotalEqualsItemPrice#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_TwoItemsList_TotalAsExpected#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_Items_OutputItemListNotNull#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_OneItemList_OneElementInOutputItemList#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_OneItemList_OutputItemPriceUpdated#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_OneItemList_OutputItemPriceAsOriginalPrice#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_OneImportedItemList_OutputItemPriceUpdated#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_OneFOODImportedItemList_OutputItemPriceUpdated#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_Items_OutputTaxNotNull#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_OneItemList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
-            <element signature="method#calculate_TwoItemsList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/UpFiveCentRounderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="docComment;method#roundNearestFiveCent_Input_ExpectedOutput01#0;class#UpFiveCentRounderTest#0" expanded="false" />
-            <element signature="method#roundNearestFiveCent_Input_ExpectedOutput01#0;class#UpFiveCentRounderTest#0" expanded="false" />
-            <element signature="method#roundNearestFiveCent_Input_ExpectedOutput02#0;class#UpFiveCentRounderTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/model/ItemType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/TaxCalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="160" column="59" lean-forward="false" selection-start-line="160" selection-start-column="59" selection-end-line="160" selection-end-column="59" />
-          <folding>
-            <element signature="method#calculate_ItemAndExceptionList_ResultNotNull#0;class#TaxCalculatorTest#0" expanded="false" />
-            <element signature="method#calculate_ItemAndExceptionList_OneAndAHalf#0;class#TaxCalculatorTest#0" expanded="false" />
-            <element signature="method#calculate_ItemAndTwoElementExceptionsList_OneAndAHalf#0;class#TaxCalculatorTest#0" expanded="false" />
-            <element signature="method#calculate_ItemAndTwoElementExceptionsList_One#0;class#TaxCalculatorTest#0" expanded="false" />
-            <element signature="method#calculate_ItemAndTwoElementExceptionsList_ExpectedOneAndAHalf#0;class#TaxCalculatorTest#0" expanded="false" />
-            <element signature="method#calculate_ItemAndTwoElementExceptionsList_ExpectedOutput#0;class#TaxCalculatorTest#0" expanded="false" />
-            <element signature="method#calculate_Item_ExpectedRoundedOutput#0;class#TaxCalculatorTest#0" expanded="false" />
-            <element signature="method#calculate_ItemWithQuantityTwo_ExpectedTax#0;class#TaxCalculatorTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1060,14 +1050,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/helper/Builder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/helper/Builder.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
@@ -1081,61 +1064,17 @@
         <state relative-caret-position="136">
           <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="false" />
+            <element signature="e#304#305#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#LoadConfig#0;class#App#0" expanded="false" />
-            <element signature="method#input_example_1#0;class#App#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/IntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="48" column="43" lean-forward="false" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/TaxCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Readme.me">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.me" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/resources/output_02.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1143,7 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1166,15 +1104,131 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/io/GsonOutputManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/resources/output_01.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="54" lean-forward="false" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/resources/example_01.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/data/Output.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="method#Output#0;class#Output#0" expanded="false" />
+            <element signature="method#equals#0;class#Output#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/PercentageCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/data/ItemType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/data/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/TaxCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/EngineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="216" column="53" lean-forward="false" selection-start-line="216" selection-start-column="53" selection-end-line="216" selection-end-column="53" />
+          <folding>
+            <element signature="docComment;method#calculate_Items_OutputNotNull#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_Items_OutputNotNull#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_Items_OutputTotalNotNull#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_OneItem_TotalEqualsItemPrice#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_TwoItemsList_TotalAsExpected#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_Items_OutputItemListNotNull#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_OneItemList_OneElementInOutputItemList#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_OneItemList_OutputItemPriceUpdated#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_OneItemList_OutputItemPriceAsOriginalPrice#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_OneImportedItemList_OutputItemPriceUpdated#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_OneFOODImportedItemList_OutputItemPriceUpdated#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_Items_OutputTaxNotNull#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_OneItemList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
+            <element signature="method#calculate_TwoItemsList_TaxAsExpected#0;class#EngineTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/IntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="64" column="91" lean-forward="false" selection-start-line="64" selection-start-column="91" selection-end-line="64" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/PercentageCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/builder/Builder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="150" column="24" lean-forward="false" selection-start-line="150" selection-start-column="24" selection-end-line="150" selection-end-column="24" />
+        <state relative-caret-position="459">
+          <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
           <folding>
             <element signature="class#ItemBuilder#0;class#Builder#0" expanded="false" />
             <element signature="method#setName#0;class#ItemBuilder#0;class#Builder#0" expanded="false" />
@@ -1183,14 +1237,14 @@
             <element signature="method#setPrice#2;class#ItemBuilder#0;class#Builder#0" expanded="false" />
             <element signature="method#setImported#0;class#ItemBuilder#0;class#Builder#0" expanded="false" />
             <element signature="method#setType#0;class#ItemBuilder#0;class#Builder#0" expanded="false" />
-            <element signature="e#1810#1811#0" expanded="true" />
-            <element signature="e#1888#1889#0" expanded="true" />
+            <element signature="e#2041#2042#0" expanded="true" />
+            <element signature="e#2119#2120#0" expanded="true" />
             <element signature="class#TaxCalculatorBuilder#0;class#Builder#0" expanded="false" />
-            <element signature="method#TaxCalculatorBuilder#0;class#TaxCalculatorBuilder#0;class#Builder#0" expanded="false" />
-            <element signature="method#addTypeToExceptions#0;class#TaxCalculatorBuilder#0;class#Builder#0" expanded="false" />
-            <element signature="method#build#0;class#TaxCalculatorBuilder#0;class#Builder#0" expanded="false" />
-            <element signature="e#3253#3254#0" expanded="true" />
-            <element signature="e#3295#3296#0" expanded="true" />
+            <element signature="e#2954#2964#0" expanded="true" />
+            <element signature="e#3427#3428#0" expanded="true" />
+            <element signature="e#3515#3516#0" expanded="true" />
+            <element signature="class#TaxPercentageCalculatorBuilder#0;class#Builder#0" expanded="false" />
+            <element signature="class#OutputBuilder#0;class#Builder#0" expanded="false" />
             <element signature="method#OutputBuilder#0;class#OutputBuilder#0;class#Builder#0" expanded="false" />
             <element signature="method#addItem#0;class#OutputBuilder#0;class#Builder#0" expanded="false" />
             <element signature="method#setTotal#0;class#OutputBuilder#0;class#Builder#0" expanded="false" />
@@ -1207,38 +1261,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/model/Output.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/TaxCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
-            <element signature="method#Output#0;class#Output#0" expanded="false" />
-            <element signature="method#equals#0;class#Output#0" expanded="false" />
+            <element signature="method#calculate_Item_ResultNotNull#0;class#TaxCalculatorTest#0" expanded="false" />
+            <element signature="method#calculate_Item_ExpectedOutput00#0;class#TaxCalculatorTest#0" expanded="false" />
+            <element signature="method#calculate_Item_ExpectedOutput01#0;class#TaxCalculatorTest#0" expanded="false" />
+            <element signature="method#calculate_Item_ExpectedOutput02#0;class#TaxCalculatorTest#0" expanded="false" />
+            <element signature="method#calculate_Item_ExpectedOutput03#0;class#TaxCalculatorTest#0" expanded="false" />
+            <element signature="method#calculate_Item_ExpectedOutput04#0;class#TaxCalculatorTest#0" expanded="false" />
+            <element signature="method#calculate_Item_ExpectedOutput05#0;class#TaxCalculatorTest#0" expanded="false" />
+            <element signature="method#calculate_ItemWithQuantityTwo_ExpectedOutput06#0;class#TaxCalculatorTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/resources/example_01.json">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/logic/PercentageCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="323">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#calculate_item_percentageExpected#0;class#PercentageCalculatorTest#0" expanded="false" />
+            <element signature="method#calculate_item_percentageExpected01#0;class#PercentageCalculatorTest#0" expanded="false" />
+            <element signature="method#calculate_item_percentageExpected02#0;class#PercentageCalculatorTest#0" expanded="false" />
+            <element signature="method#calculate_item_percentageExpected03#0;class#PercentageCalculatorTest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/abc/project/resources/output_01.json">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="54" lean-forward="false" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
-          <folding />
+        <state relative-caret-position="408">
+          <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+          <folding>
+            <element signature="method#LoadConfig#0;class#App#0" expanded="false" />
+            <element signature="method#input_example_1#0;class#App#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Readme.md">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abc/project/logic/calculator/TaxPercentageCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="68" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

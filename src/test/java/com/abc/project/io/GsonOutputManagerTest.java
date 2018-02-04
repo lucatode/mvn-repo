@@ -2,8 +2,8 @@ package com.abc.project.io;
 
 
 import com.abc.project.builder.Builder;
-import com.abc.project.model.ItemType;
-import com.abc.project.model.Output;
+import com.abc.project.data.ItemType;
+import com.abc.project.data.Output;
 import com.google.gson.Gson;
 import org.junit.Test;
 

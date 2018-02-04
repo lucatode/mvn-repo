@@ -1,10 +1,8 @@
 package com.abc.project.logic;
 
 import com.abc.project.logic.calculator.Calculator;
-import com.abc.project.logic.calculator.TaxCalculator;
-import com.abc.project.model.Item;
-import com.abc.project.model.ItemType;
-import com.abc.project.model.Output;
+import com.abc.project.data.Item;
+import com.abc.project.data.Output;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

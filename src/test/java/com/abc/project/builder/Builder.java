@@ -1,11 +1,15 @@
 package com.abc.project.builder;
 
+import com.abc.project.logic.PercentageCalculatorTest;
+import com.abc.project.logic.calculator.Calculator;
+import com.abc.project.logic.calculator.PercentageCalculator;
 import com.abc.project.logic.calculator.TaxCalculator;
+import com.abc.project.logic.calculator.TaxPercentageCalculator;
 import com.abc.project.logic.rounder.DecimalRounder;
 import com.abc.project.logic.rounder.UpFiveCentRounder;
-import com.abc.project.model.Item;
-import com.abc.project.model.ItemType;
-import com.abc.project.model.Output;
+import com.abc.project.data.Item;
+import com.abc.project.data.ItemType;
+import com.abc.project.data.Output;
 import com.google.gson.Gson;
 
 import java.math.BigDecimal;
@@ -84,27 +88,50 @@ public class Builder {
     public static class TaxCalculatorBuilder {
 
         private DecimalRounder rounder;
-        private List<ItemType> exceptions;
-        private BigDecimal baseTax;
-        private BigDecimal importedTax;
+        private PercentageCalculator percentageCalculator;
 
         public TaxCalculatorBuilder(){
             this.rounder = new UpFiveCentRounder();
-            this.exceptions = new ArrayList<ItemType>();
-            this.baseTax = new BigDecimal("0.10");
-            this.importedTax = new BigDecimal("0.05");
+            List<ItemType> exceptions = new ArrayList<ItemType>();
+            BigDecimal baseTax = new BigDecimal("0.10");
+            BigDecimal importedTax = new BigDecimal("0.05");
+            this.percentageCalculator = new TaxPercentageCalculator(exceptions,baseTax,importedTax);
         }
 
-        public TaxCalculatorBuilder addTypeToExceptions(ItemType type) {
-            this.exceptions.add(type);
+         public TaxCalculatorBuilder addPercetageCalculator(PercentageCalculator percCalculator ){
+            this.percentageCalculator = percCalculator;
             return this;
         }
 
 
         public TaxCalculator build() {
-            return new TaxCalculator(this.rounder, this.exceptions, this.baseTax, this.importedTax);
+            return new TaxCalculator(this.rounder,this.percentageCalculator);
+        }
+    }
+
+    public static TaxPercentageCalculatorBuilder taxPercCalculator() {
+        return new TaxPercentageCalculatorBuilder();
+    }
+    public static class TaxPercentageCalculatorBuilder {
+
+        private final List<ItemType> exceptions;
+        private final BigDecimal baseTax;
+        private final BigDecimal importedTax;
+
+        public TaxPercentageCalculatorBuilder(){
+            this.exceptions = new ArrayList<ItemType>();
+            this.baseTax = new BigDecimal("0.10");
+            this.importedTax = new BigDecimal("0.05");
         }
 
+        public TaxPercentageCalculatorBuilder addTypeToExceptions(ItemType type) {
+            this.exceptions.add(type);
+            return this;
+        }
+
+        public TaxPercentageCalculator build() {
+            return new TaxPercentageCalculator(this.exceptions,this.baseTax,this.importedTax);
+        }
 
     }
 

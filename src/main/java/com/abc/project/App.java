@@ -6,10 +6,11 @@ import com.abc.project.io.GsonOutputManager;
 import com.abc.project.io.OutputManager;
 import com.abc.project.logic.Engine;
 import com.abc.project.logic.calculator.TaxCalculator;
+import com.abc.project.logic.calculator.TaxPercentageCalculator;
 import com.abc.project.logic.rounder.UpFiveCentRounder;
-import com.abc.project.model.Item;
-import com.abc.project.model.ItemType;
-import com.abc.project.model.Output;
+import com.abc.project.data.Item;
+import com.abc.project.data.ItemType;
+import com.abc.project.data.Output;
 import com.google.gson.Gson;
 
 import java.math.BigDecimal;
@@ -42,12 +43,13 @@ public class App {
         taxException.add(ItemType.BOOK);
         taxException.add(ItemType.MEDICAL);
 
-        final TaxCalculator tc = new TaxCalculator(
-                new UpFiveCentRounder(),
+        final TaxPercentageCalculator tpc = new TaxPercentageCalculator(
                 taxException,
                 new BigDecimal("0.10"),
                 new BigDecimal("0.05")
         );
+
+        final TaxCalculator tc = new TaxCalculator(new UpFiveCentRounder(), tpc);
 
         return tc;
     }

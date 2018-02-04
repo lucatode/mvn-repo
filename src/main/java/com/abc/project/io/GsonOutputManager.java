@@ -1,6 +1,6 @@
 package com.abc.project.io;
 
-import com.abc.project.model.Output;
+import com.abc.project.data.Output;
 import com.google.gson.Gson;
 
 public class GsonOutputManager implements OutputManager<Output> {

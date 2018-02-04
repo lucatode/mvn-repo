@@ -1,4 +1,4 @@
-package com.abc.project.model;
+package com.abc.project.data;
 
 import java.math.BigDecimal;
 import java.util.Objects;

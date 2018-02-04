@@ -1,6 +1,6 @@
 package com.abc.project.io;
 
-import com.abc.project.model.Item;
+import com.abc.project.data.Item;
 import com.google.gson.Gson;
 
 import java.util.Arrays;

@@ -9,9 +9,6 @@ Apply an additional 5% tax on all imported items.
 Calculate all taxes applied.
 Calculate the amount sum.
 
-
-
-
 ### Input example:
 ```
 [{
@@ -35,4 +32,3 @@ Calculate the amount sum.
 "taxes":1.50
 }
 ```
-

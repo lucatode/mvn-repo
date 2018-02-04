@@ -1,4 +1,4 @@
-package com.abc.project.model;
+package com.abc.project.data;
 
 public enum ItemType {
     STANDARD,

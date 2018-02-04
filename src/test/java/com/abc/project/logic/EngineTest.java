@@ -1,9 +1,10 @@
 package com.abc.project.logic;
 
 import com.abc.project.builder.Builder;
-import com.abc.project.model.Item;
-import com.abc.project.model.ItemType;
-import com.abc.project.model.Output;
+import com.abc.project.data.Item;
+import com.abc.project.data.ItemType;
+import com.abc.project.data.Output;
+import com.abc.project.logic.calculator.TaxPercentageCalculator;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -69,7 +70,8 @@ public class EngineTest {
     @Test
     public void calculate_TwoItemsList_TotalAsExpected(){
         //Setup
-        Engine engine = new Engine(Builder.taxCalculator().addTypeToExceptions(ItemType.FOOD).build());
+        TaxPercentageCalculator tpc = Builder.taxPercCalculator().addTypeToExceptions(ItemType.FOOD).build();
+        Engine engine = new Engine(Builder.taxCalculator().addPercetageCalculator(tpc).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item().setPrice(new BigDecimal("10.00")).setImported(true).setType(ItemType.FOOD).build());
         items.add( Builder.item().setPrice(new BigDecimal("47.50")).setImported(true).setType(ItemType.STANDARD).build());
@@ -86,7 +88,8 @@ public class EngineTest {
     @Test
     public void calculate_Items_OutputItemListNotNull(){
         //Setup
-        Engine engine = new Engine(Builder.taxCalculator().addTypeToExceptions(ItemType.FOOD).build());
+        TaxPercentageCalculator tpc = Builder.taxPercCalculator().addTypeToExceptions(ItemType.FOOD).build();
+        Engine engine = new Engine(Builder.taxCalculator().addPercetageCalculator(tpc).build());
         List<Item> items = new ArrayList<Item>();
 
         //Execute
@@ -99,7 +102,8 @@ public class EngineTest {
     @Test
     public void calculate_OneItemList_OneElementInOutputItemList(){
         //Setup
-        Engine engine = new Engine(Builder.taxCalculator().addTypeToExceptions(ItemType.FOOD).build());
+        TaxPercentageCalculator tpc = Builder.taxPercCalculator().addTypeToExceptions(ItemType.FOOD).build();
+        Engine engine = new Engine(Builder.taxCalculator().addPercetageCalculator(tpc).build());
         List<Item> items = new ArrayList<Item>();
         items.add(Builder.item().build());
 
@@ -113,7 +117,8 @@ public class EngineTest {
     @Test //Input: { 14.99, false, STANDARD } - Expected item output price: 16.49
     public void calculate_OneItemList_OutputItemPriceUpdated(){
         //Setup
-        Engine engine = new Engine(Builder.taxCalculator().addTypeToExceptions(ItemType.FOOD).build());
+        TaxPercentageCalculator tpc = Builder.taxPercCalculator().addTypeToExceptions(ItemType.FOOD).build();
+        Engine engine = new Engine(Builder.taxCalculator().addPercetageCalculator(tpc).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item()
                 .setPrice(new BigDecimal("14.99"))
@@ -133,7 +138,8 @@ public class EngineTest {
     @Test //Input: { 12.49, false, BOOK } - Expected item output price: 12.49
     public void calculate_OneItemList_OutputItemPriceAsOriginalPrice()/**/{
         //Setup
-        Engine engine = new Engine(Builder.taxCalculator().addTypeToExceptions(ItemType.FOOD).build());
+        TaxPercentageCalculator tpc = Builder.taxPercCalculator().addTypeToExceptions(ItemType.FOOD).build();
+        Engine engine = new Engine(Builder.taxCalculator().addPercetageCalculator(tpc).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item()
                 .setPrice(new BigDecimal("12.49"))
@@ -153,7 +159,8 @@ public class EngineTest {
     @Test //Input: { 47.50, true, STANDARD } - Expected item output price: 54.65
     public void calculate_OneImportedItemList_OutputItemPriceUpdated(){
         //Setup
-        Engine engine = new Engine(Builder.taxCalculator().addTypeToExceptions(ItemType.FOOD).build());
+        TaxPercentageCalculator tpc = Builder.taxPercCalculator().addTypeToExceptions(ItemType.FOOD).build();
+        Engine engine = new Engine(Builder.taxCalculator().addPercetageCalculator(tpc).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item()
                 .setPrice(new BigDecimal("47.50"))
@@ -173,7 +180,8 @@ public class EngineTest {
     @Test //Input: { 10.00, true, FOOD } - Expected item output price: 10.50
     public void calculate_OneFOODImportedItemList_OutputItemPriceUpdated(){
         //Setup
-        Engine engine = new Engine(Builder.taxCalculator().addTypeToExceptions(ItemType.FOOD).build());
+        TaxPercentageCalculator tpc = Builder.taxPercCalculator().addTypeToExceptions(ItemType.FOOD).build();
+        Engine engine = new Engine(Builder.taxCalculator().addPercetageCalculator(tpc).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item()
                 .setPrice(new BigDecimal("10.00"))
@@ -194,7 +202,8 @@ public class EngineTest {
     @Test
     public void calculate_Items_OutputTaxNotNull(){
         //Setup
-        Engine engine = new Engine(Builder.taxCalculator().addTypeToExceptions(ItemType.FOOD).build());
+        TaxPercentageCalculator tpc = Builder.taxPercCalculator().addTypeToExceptions(ItemType.FOOD).build();
+        Engine engine = new Engine(Builder.taxCalculator().addPercetageCalculator(tpc).build());
         List<Item> items = new ArrayList<Item>();
 
         //Execute
@@ -207,7 +216,8 @@ public class EngineTest {
     @Test //Input: { 14.99, false, STANDARD } - Expected tax: 1.50
     public void calculate_OneItemList_TaxAsExpected(){
         //Setup
-        Engine engine = new Engine(Builder.taxCalculator().addTypeToExceptions(ItemType.FOOD).build());
+        TaxPercentageCalculator tpc = Builder.taxPercCalculator().addTypeToExceptions(ItemType.FOOD).build();
+        Engine engine = new Engine(Builder.taxCalculator().addPercetageCalculator(tpc).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item().setPrice(new BigDecimal("14.99")).setImported(false).setType(ItemType.STANDARD).build());
         BigDecimal expectedTax = new BigDecimal("1.50");
@@ -222,7 +232,8 @@ public class EngineTest {
     @Test //Input: [{ 10.00, true, FOOD },{ 47.50, true, STANDARD }] - Expected tax: 7.65
     public void calculate_TwoItemsList_TaxAsExpected(){
         //Setup
-        Engine engine = new Engine(Builder.taxCalculator().addTypeToExceptions(ItemType.FOOD).build());
+        TaxPercentageCalculator tpc = Builder.taxPercCalculator().addTypeToExceptions(ItemType.FOOD).build();
+        Engine engine = new Engine(Builder.taxCalculator().addPercetageCalculator(tpc).build());
         List<Item> items = new ArrayList<Item>();
         items.add( Builder.item().setPrice(new BigDecimal("10.00")).setImported(true).setType(ItemType.FOOD).build());
         items.add( Builder.item().setPrice(new BigDecimal("47.50")).setImported(true).setType(ItemType.STANDARD).build());

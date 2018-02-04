@@ -1,8 +1,8 @@
 package com.abc.project.io;
 
 import com.abc.project.builder.Builder;
-import com.abc.project.model.Item;
-import com.abc.project.model.ItemType;
+import com.abc.project.data.Item;
+import com.abc.project.data.ItemType;
 import com.google.gson.Gson;
 import org.junit.Test;
 import java.math.BigDecimal;
