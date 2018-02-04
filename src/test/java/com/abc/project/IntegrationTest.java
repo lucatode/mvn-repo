@@ -25,7 +25,7 @@ public class IntegrationTest {
                 .addTypeToExceptions(ItemType.BOOK)
                 .addTypeToExceptions(ItemType.MEDICAL)
                 .build());
-        List<Item> items = iim.getList(Builder.input_example_1()); //example_2
+        List<Item> items = iim.getList(Builder.input_example_1()); //example_1
         Output o = e.calculate(items);
 
         //Assert output is equals to expect output
@@ -59,7 +59,7 @@ public class IntegrationTest {
                 .addTypeToExceptions(ItemType.BOOK)
                 .addTypeToExceptions(ItemType.MEDICAL)
                 .build());
-        List<Item> items = iim.getList(Builder.input_example_3()); //example_2
+        List<Item> items = iim.getList(Builder.input_example_3()); //example_3
         Output o = e.calculate(items);
 
         //Assert output is equals to expect output

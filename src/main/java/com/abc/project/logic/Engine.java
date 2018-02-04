@@ -59,6 +59,7 @@ public class Engine {
             Item outputItem = new Item(newPrice, item.isImported(), item.getName(), item.getType(), item.getQuantity());
             outputItems.add(outputItem);
         }
+
         //build output
         return new Output(total, totalTax, outputItems);
 

@@ -11,8 +11,8 @@ public class TaxCalculator implements Calculator<Item, BigDecimal> {
 
     private final DecimalRounder rounder;
     private final List<ItemType> exceptions;
-    private final BigDecimal baseTax = new BigDecimal("0.10");
-    private final BigDecimal importedTax = new BigDecimal("0.05");
+    private final BigDecimal baseTax;
+    private final BigDecimal importedTax;
 
     public TaxCalculator(
             DecimalRounder rounder,
@@ -22,27 +22,30 @@ public class TaxCalculator implements Calculator<Item, BigDecimal> {
 
         this.rounder = rounder;
         this.exceptions = exceptions;
+        this.baseTax = baseTax;
+        this.importedTax = importedTax;
     }
 
     public BigDecimal calculate(Item item) {
 
         BigDecimal taxPerc = new BigDecimal("0.00");
 
-        if(!exceptions.contains(item.getType())){
-            taxPerc = taxPerc.add(baseTax);
+        if(!this.exceptions.contains(item.getType())){
+            taxPerc = taxPerc.add(this.baseTax);
         }
 
         if(item.isImported()){
-            taxPerc = taxPerc.add(importedTax);
+            taxPerc = taxPerc.add(this.importedTax);
         }
 
         BigDecimal itemPrice = item.getPrice();
         itemPrice.setScale(2, BigDecimal.ROUND_HALF_UP);
 
         BigDecimal taxValue = (itemPrice.multiply(taxPerc)).multiply(new BigDecimal(item.getQuantity()));
-        BigDecimal tax = rounder.round(taxValue);
+        BigDecimal tax = this.rounder.round(taxValue);
 
         tax = tax.setScale(2, BigDecimal.ROUND_HALF_UP);
+
         return tax;
     }
 }

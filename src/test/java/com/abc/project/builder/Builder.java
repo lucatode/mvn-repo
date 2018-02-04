@@ -137,7 +137,6 @@ public class Builder {
             return this;
         }
 
-
         public OutputBuilder setTaxes(BigDecimal taxes){
             this.taxes = taxes;
             return this;
@@ -151,7 +150,6 @@ public class Builder {
         public Output build() {
             return new Output(this.total, this.taxes, this.items);
         }
-
 
     }
 
