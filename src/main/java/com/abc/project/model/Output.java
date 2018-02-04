@@ -7,15 +7,15 @@ import java.util.Objects;
 public class Output {
     private final List<Item> items;
     private final BigDecimal total;
-    private final BigDecimal tax;
+    private final BigDecimal taxes;
 
 
     public Output(
             BigDecimal total,
-            BigDecimal tax,
+            BigDecimal taxes,
             List<Item> items){
         this.total = total;
-        this.tax = tax;
+        this.taxes = taxes;
         this.items = items;
     }
 
@@ -23,8 +23,8 @@ public class Output {
         return total;
     }
 
-    public BigDecimal getTax() {
-        return tax;
+    public BigDecimal getTaxes() {
+        return taxes;
     }
 
     public List<Item> getItems() {
@@ -38,12 +38,12 @@ public class Output {
         Output output = (Output) o;
         return Objects.equals(items, output.items) &&
                 Objects.equals(total, output.total) &&
-                Objects.equals(tax, output.tax);
+                Objects.equals(taxes, output.taxes);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(items, total, tax);
+        return Objects.hash(items, total, taxes);
     }
 }

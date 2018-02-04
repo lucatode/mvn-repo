@@ -6,5 +6,5 @@
     {"name":"box of chocolates","quantity":1,"imported":true,"price":11.80,"type":"FOOD"}
   ],
   "total":74.63,
-  "tax":6.65
+  "taxes":6.65
 }

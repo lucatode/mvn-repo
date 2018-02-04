@@ -43,7 +43,7 @@ Calculate the amount sum.
   {"name":"chocolate bar","quantity":1,"imported":false,"price":0.85,"type":"FOOD"}
 ],
 "total":29.83,
-"tax":1.50
+"taxes":1.50
 }
 ```
 

@@ -4,5 +4,5 @@
     {"name":"bottle of perfume","quantity":1,"imported":true,"price":54.65,"type":"STANDARD"}
   ],
   "total":65.15,
-  "tax":7.65
+  "taxes":7.65
 }

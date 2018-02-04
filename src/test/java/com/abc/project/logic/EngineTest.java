@@ -201,7 +201,7 @@ public class EngineTest {
         Output output = engine.calculate(items);
 
         //Verify
-        assertTrue(output.getTax() != null);
+        assertTrue(output.getTaxes() != null);
     }
 
     @Test //Input: { 14.99, false, STANDARD } - Expected tax: 1.50
@@ -216,7 +216,7 @@ public class EngineTest {
         Output output = engine.calculate(items);
 
         //Verify
-        assertTrue(output.getTax().equals(expectedTax));
+        assertTrue(output.getTaxes().equals(expectedTax));
     }
 
     @Test //Input: [{ 10.00, true, FOOD },{ 47.50, true, STANDARD }] - Expected tax: 7.65
@@ -232,7 +232,7 @@ public class EngineTest {
         Output output = engine.calculate(items);
 
         //Verify
-        assertTrue(output.getTax().equals(expectedTax));
+        assertTrue(output.getTaxes().equals(expectedTax));
     }
 
 

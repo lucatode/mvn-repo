@@ -18,7 +18,7 @@ public class GsonOutputManagerTest {
         //Setup
         GsonOutputManager jw = new GsonOutputManager(new Gson());
         Output o = Builder.output().build();
-        String expectedString = "{\"items\":[],\"total\":0.00,\"tax\":0.00}";
+        String expectedString = "{\"items\":[],\"total\":0.00,\"taxes\":0.00}";
 
         //Execute
         String jsonString = jw.write(o);
@@ -34,7 +34,7 @@ public class GsonOutputManagerTest {
         Output o = Builder.output()
                 .addItem(Builder.item().build())
                 .build();
-        String expectedString = "{\"items\":[{\"price\":10.00,\"quantity\":1,\"imported\":false,\"name\":\"Item\",\"type\":\"STANDARD\"}],\"total\":0.00,\"tax\":0.00}";
+        String expectedString = "{\"items\":[{\"price\":10.00,\"quantity\":1,\"imported\":false,\"name\":\"Item\",\"type\":\"STANDARD\"}],\"total\":0.00,\"taxes\":0.00}";
 
         //Execute
         String jsonString = jw.write(o);
@@ -50,7 +50,7 @@ public class GsonOutputManagerTest {
         Output o = Builder.output()
                 .addItem(Builder.item().setType(ItemType.FOOD).build())
                 .build();
-        String expectedString = "{\"items\":[{\"price\":10.00,\"quantity\":1,\"imported\":false,\"name\":\"Item\",\"type\":\"FOOD\"}],\"total\":0.00,\"tax\":0.00}";
+        String expectedString = "{\"items\":[{\"price\":10.00,\"quantity\":1,\"imported\":false,\"name\":\"Item\",\"type\":\"FOOD\"}],\"total\":0.00,\"taxes\":0.00}";
 
         //Execute
         String jsonString = jw.write(o);
@@ -67,7 +67,7 @@ public class GsonOutputManagerTest {
                 .addItem(Builder.item().setType(ItemType.FOOD).build())
                 .setTotal(new BigDecimal("10.00"))
                 .build();
-        String expectedString = "{\"items\":[{\"price\":10.00,\"quantity\":1,\"imported\":false,\"name\":\"Item\",\"type\":\"FOOD\"}],\"total\":10.00,\"tax\":0.00}";
+        String expectedString = "{\"items\":[{\"price\":10.00,\"quantity\":1,\"imported\":false,\"name\":\"Item\",\"type\":\"FOOD\"}],\"total\":10.00,\"taxes\":0.00}";
 
         //Execute
         String jsonString = jw.write(o);
@@ -84,7 +84,7 @@ public class GsonOutputManagerTest {
                 .addItem(Builder.item().setType(ItemType.FOOD).build())
                 .setTaxes(new BigDecimal("1.00"))
                 .build();
-        String expectedString = "{\"items\":[{\"price\":10.00,\"quantity\":1,\"imported\":false,\"name\":\"Item\",\"type\":\"FOOD\"}],\"total\":0.00,\"tax\":1.00}";
+        String expectedString = "{\"items\":[{\"price\":10.00,\"quantity\":1,\"imported\":false,\"name\":\"Item\",\"type\":\"FOOD\"}],\"total\":0.00,\"taxes\":1.00}";
 
         //Execute
         String jsonString = jw.write(o);
