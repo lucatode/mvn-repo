@@ -1,15 +1,13 @@
 package com.abc.project.builder;
 
-import com.abc.project.logic.PercentageCalculatorTest;
+import com.abc.project.data.Item;
+import com.abc.project.data.ItemType;
+import com.abc.project.data.Output;
 import com.abc.project.logic.calculator.Calculator;
-import com.abc.project.logic.calculator.PercentageCalculator;
 import com.abc.project.logic.calculator.TaxCalculator;
 import com.abc.project.logic.calculator.TaxPercentageCalculator;
 import com.abc.project.logic.rounder.DecimalRounder;
 import com.abc.project.logic.rounder.UpFiveCentRounder;
-import com.abc.project.data.Item;
-import com.abc.project.data.ItemType;
-import com.abc.project.data.Output;
 import com.google.gson.Gson;
 
 import java.math.BigDecimal;
@@ -88,7 +86,7 @@ public class Builder {
     public static class TaxCalculatorBuilder {
 
         private DecimalRounder rounder;
-        private PercentageCalculator percentageCalculator;
+        private Calculator<Item,BigDecimal> percentageCalculator;
 
         public TaxCalculatorBuilder(){
             this.rounder = new UpFiveCentRounder();
@@ -98,7 +96,7 @@ public class Builder {
             this.percentageCalculator = new TaxPercentageCalculator(exceptions,baseTax,importedTax);
         }
 
-         public TaxCalculatorBuilder addPercetageCalculator(PercentageCalculator percCalculator ){
+         public TaxCalculatorBuilder addPercetageCalculator(Calculator<Item,BigDecimal> percCalculator ){
             this.percentageCalculator = percCalculator;
             return this;
         }

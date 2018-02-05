@@ -1,8 +1,0 @@
-{
-  "items":[
-    {"name":"box of chocolates","quantity":1,"imported":true,"price":10.50,"type":"FOOD"},
-    {"name":"bottle of perfume","quantity":1,"imported":true,"price":54.65,"type":"STANDARD"}
-  ],
-  "total":65.15,
-  "taxes":7.65
-}

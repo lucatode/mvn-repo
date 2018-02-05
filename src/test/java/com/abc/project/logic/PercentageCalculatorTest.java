@@ -3,6 +3,7 @@ package com.abc.project.logic;
 import com.abc.project.builder.Builder;
 import com.abc.project.data.Item;
 import com.abc.project.data.ItemType;
+import com.abc.project.logic.calculator.Calculator;
 import com.abc.project.logic.calculator.PercentageCalculator;
 import org.junit.Test;
 
@@ -16,7 +17,7 @@ public class PercentageCalculatorTest {
     @Test // Setup: { No exception } => 10% expected
     public void calculate_item_percentageExpected(){
         //Setup
-        PercentageCalculator pc = Builder.taxPercCalculator().build();
+        Calculator<Item,BigDecimal> pc = Builder.taxPercCalculator().build();
         Item i = Builder.item().build();
 
         //Execute
@@ -30,7 +31,7 @@ public class PercentageCalculatorTest {
     @Test // Setup: { FOOD }, Item: { FOOD } => 0% expected
     public void calculate_item_percentageExpected01(){
         //Setup
-        PercentageCalculator pc = Builder.taxPercCalculator()
+        Calculator<Item,BigDecimal> pc = Builder.taxPercCalculator()
                 .addTypeToExceptions(ItemType.FOOD)
                 .build();
         Item i = Builder.item().setType(ItemType.FOOD).build();
@@ -46,7 +47,7 @@ public class PercentageCalculatorTest {
     @Test // Setup: { FOOD }, Item: { FOOD, Imported } => 5% expected
     public void calculate_item_percentageExpected02(){
         //Setup
-        PercentageCalculator pc = Builder.taxPercCalculator()
+        Calculator<Item,BigDecimal> pc = Builder.taxPercCalculator()
                 .addTypeToExceptions(ItemType.FOOD)
                 .build();
 
@@ -66,7 +67,7 @@ public class PercentageCalculatorTest {
     @Test // Setup: { FOOD }, Item: { STANDARD, Imported } => 15% expected
     public void calculate_item_percentageExpected03(){
         //Setup
-        PercentageCalculator pc = Builder.taxPercCalculator()
+        Calculator<Item,BigDecimal> pc = Builder.taxPercCalculator()
                 .addTypeToExceptions(ItemType.FOOD)
                 .build();
 

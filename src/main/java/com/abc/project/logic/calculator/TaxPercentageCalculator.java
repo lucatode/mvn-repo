@@ -6,7 +6,7 @@ import com.abc.project.data.ItemType;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class TaxPercentageCalculator implements PercentageCalculator {
+public class TaxPercentageCalculator implements Calculator<Item,BigDecimal> {
     private final List<ItemType> exceptions;
     private final BigDecimal baseTax;
     private final BigDecimal importedTax;
