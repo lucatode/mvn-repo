@@ -4,7 +4,6 @@ import com.abc.project.builder.Builder;
 import com.abc.project.data.Item;
 import com.abc.project.data.ItemType;
 import com.abc.project.logic.calculator.Calculator;
-import com.abc.project.logic.calculator.PercentageCalculator;
 import org.junit.Test;
 
 import java.math.BigDecimal;
